@@ -212,6 +212,12 @@
 						<unitDesc>Light attack unit1</unitDesc>
 					</li>
 					<li>
+						<kind>MUGV_FT</kind>
+						<spawnTime>400</spawnTime>
+						<type>RTS_MediumUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+					</li>
+					<li>
 						<kind>MCRU</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_SpecialUnits</type>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="MediumUnit">
+		<defName>MUGV_FT</defName>
+		<label>MUGV_FT</label>
+		<description>Medium attack unit1.</description>
+		<statBases>
+			<MoveSpeed>2</MoveSpeed>
+			<!-- 移动速度 -->
+		</statBases>
+		<comps>
+			<li Class="RTS.UnitCompProperties">
+				<mass>200</mass>
+				<cost>20</cost>
+			</li>
+			<li Class="RTS.CompProperties_TurretGun">
+				<!-- 添加炮塔枪组件 -->
+				<turretDef>MUGV_FT_Turret</turretDef>
+				<littleCooldown>5</littleCooldown>
+				<!-- 连射冷却 -->
+				<extraShootCount>0</extraShootCount>
+				<!-- 额外射击次数 -->
+				<warmupTime>200</warmupTime>
+				<!-- 冷却时间 -->
+				<angleOffset>-90</angleOffset>
+				<autoAttack>false</autoAttack>
+				<renderNodeProperties>
+					<li>
+						<nodeClass>RTS.PawnRenderNode_TurretGun</nodeClass>
+						<workerClass>RTS.PawnRenderNodeWorker_TurretGun</workerClass>
+						<overrideMeshSize>(3, 3)</overrideMeshSize>
+						<parentTagDef>Body</parentTagDef>
+						<baseLayer>20</baseLayer>
+						<pawnType>Any</pawnType>
+						<drawData>
+							<dataWest>
+								<rotationOffset>180</rotationOffset>
+							</dataWest>
+						</drawData>
+					</li>
+				</renderNodeProperties>
+			</li>
+		</comps>
+		<killedLeavingsPlayerHostile>
+			<Steel>50</Steel>
+		</killedLeavingsPlayerHostile>
+	</ThingDef>
+
+
+	<PawnKindDef ParentName="MediumUnitKind">
+		<defName>MUGV_FT</defName>
+		<label>MUGV_FT</label>
+		<labelPlural>MUGV_FT</labelPlural>
+		<race>MUGV_FT</race>
+		<weaponTags>
+		</weaponTags>
+	</PawnKindDef>
+
+
+
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>MUGV_FT_Turret</defName>
+		<label>MUGV_FT_Turret</label>
+		<description>MUGV_FT_Turret.</description>
+		<tradeability>None</tradeability>
+		<!-- 无法交易 -->
+		<destroyOnDrop>true</destroyOnDrop>
+		<!-- 抛弃时销毁 -->
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MUGV_FT_Turret</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>2.6</Mass>
+			<AccuracyTouch>0.20</AccuracyTouch>
+			<AccuracyShort>0.90</AccuracyShort>
+			<AccuracyMedium>1.00</AccuracyMedium>
+			<AccuracyLong>0.95</AccuracyLong>
+		</statBases>
+		<verbs>
+			<li>
+				<!-- 武器行为类：弧形火焰喷射器 -->
+				<verbClass>Verb_ArcSprayIncinerator</verbClass>
+				<!-- 是否拥有标准命令（右键菜单选项） -->
+				<hasStandardCommand>true</hasStandardCommand>
+				<!-- 预热时间（秒）：武器准备就绪所需的时间 -->
+				<warmupTime>0.1</warmupTime>
+				<!-- 射程范围（格）：最大攻击距离 -->
+				<range>20</range>
+				<!-- 最小射程（格）：武器有效射程的最小距离 -->
+				<minRange>2</minRange>
+				<!-- 全宽度光束范围（格）：光束在该范围内保持全宽度 -->
+				<beamFullWidthRange>3</beamFullWidthRange>
+				<!-- 连发射击次数：一次触发发射多少次光束 -->
+				<burstShotCount>50</burstShotCount>
+				<!-- 是否显示连发统计信息 -->
+				<showBurstShotStats>false</showBurstShotStats>
+				<!-- 是否需要视线：必须能看到目标才能攻击 -->
+				<requireLineOfSight>true</requireLineOfSight>
+				<!-- 光束宽度：影响伤害覆盖面积 -->
+				<beamWidth>6</beamWidth>
+				<!-- 连发间隔时间：两次射击之间的延迟（游戏刻） -->
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+				<!-- 光束伤害类型：使用火焰伤害定义 -->
+				<beamDamageDef>Flame</beamDamageDef>
+				<!-- 尾声音效：射击结束时播放的声音 -->
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<!-- 枪口闪光规模：视觉效果强度 -->
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<!-- 光束音效：发射光束时播放的声音 -->
+				<soundCastBeam>Flamethrower_Firing</soundCastBeam>
+				<!-- 地面粒子效果：光束击中地面时的效果定义 -->
+				<beamGroundFleckDef>Fleck_IncineratorBeamBurn</beamGroundFleckDef>
+				<!-- 光束粒子产生概率：每游戏刻产生粒子效果的概率 -->
+				<beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+				<!-- 光束最大偏移：光束飞行过程中的随机偏移程度 -->
+				<beamMaxDeviation>0.5</beamMaxDeviation>
+				<!-- 光束曲率：光束飞行轨迹的弯曲程度 -->
+				<beamCurvature>0</beamCurvature>
+				<!-- 光束末端特效：光束到达终点时的效果定义 -->
+				<beamEndEffecterDef>IncineratorBeam_End</beamEndEffecterDef>
+				<!-- 引火概率：光束击中目标后引发火灾的概率 -->
+				<beamChanceToStartFire>0.85</beamChanceToStartFire>
+				<!-- 火焰大小范围：产生的火焰大小变化范围 -->
+				<beamFireSizeRange>0.55~0.85</beamFireSizeRange>
+				<!-- 光束起始偏移：光束发射点的偏移距离 -->
+				<beamStartOffset>.5</beamStartOffset>
+				<!-- 是否击中邻近格子：光束会同时影响周围格子 -->
+				<beamHitsNeighborCells>true</beamHitsNeighborCells>
+				<!-- 最小射程内无法击中：在最小射程内不能命中目标 -->
+				<beamCantHitWithinMinRange>true</beamCantHitWithinMinRange>
+				<!-- 邻近格子命中需要视线：击中邻近格子时也需要视线 -->
+				<beamHitsNeighborCellsRequiresLOS>true</beamHitsNeighborCellsRequiresLOS>
+				<!-- 光束点燃地面：光束能点燃地面 -->
+				<beamSetsGroundOnFire>true</beamSetsGroundOnFire>
+				<!-- AI用作纵火武器：AI知道这是纵火武器 -->
+				<ai_BeamIsIncendiary>true</ai_BeamIsIncendiary>
+				<!-- 光束路径粒子效果：光束飞行路径上的烟雾效果 -->
+				<beamLineFleckDef>Fleck_IncineratorBeamSmoke</beamLineFleckDef>
+				<!-- 高亮颜色：武器选中时的主颜色（RGB值） -->
+				<highlightColor>(180, 60, 10)</highlightColor>
+				<!-- 次级高亮颜色：武器选中时的辅助颜色（RGB值） -->
+				<secondaryHighlightColor>(220, 210, 20)</secondaryHighlightColor>
+				<!-- 光束路径粒子概率曲线：定义不同距离处产生粒子效果的概率 -->
+				<beamLineFleckChanceCurve>
+					<points>
+						<!-- 距离起点0%处，概率为0 -->
+						<li>(0, 0)</li>
+						<!-- 距离起点65%处，概率为0.02 -->
+						<li>(0.65, 0.02)</li>
+						<!-- 距离起点100%处，概率为0.5 -->
+						<li>(1, .5)</li>
+					</points>
+				</beamLineFleckChanceCurve>
+				<!-- 目标参数：定义武器的目标选择规则 -->
+				<targetParams>
+					<!-- 是否可以瞄准位置：允许直接瞄准地图上的位置 -->
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<!-- 易燃性附着火概率曲线：根据目标易燃性计算引发火灾的概率 -->
+				<flammabilityAttachFireChanceCurve>
+					<points>
+						<!-- 易燃性0.6时，引火概率为0 -->
+						<li>(0.6, 0)</li>
+						<!-- 易燃性0.7时，引火概率为0.2 -->
+						<li>(0.7, 0.2)</li>
+						<!-- 易燃性1.2时，引火概率为0.8 -->
+						<li>(1.2, 0.8)</li>
+					</points>
+				</flammabilityAttachFireChanceCurve>
+				<!-- 远程火力规则包：用于描述远程攻击的文本规则 -->
+				<rangedFireRulepack>Combat_RangedFlamethrower</rangedFireRulepack>
+			</li>
+		</verbs>
+	</ThingDef>
+
+
+
+
+
+
+
+
+</Defs>
