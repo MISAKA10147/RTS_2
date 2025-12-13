@@ -2,11 +2,11 @@
 <Defs>
 
 	<ThingDef ParentName="MediumUnit">
-		<defName>MAU_AP</defName>
-		<label>MAU_AP</label>
+		<defName>MUGV_RP</defName>
+		<label>MUGV_RP</label>
 		<description>Medium attack unit1.</description>
 		<statBases>
-			<MoveSpeed>3</MoveSpeed>
+			<MoveSpeed>2</MoveSpeed>
 			<!-- 移动速度 -->
 		</statBases>
 		<comps>
@@ -16,12 +16,12 @@
 			</li>
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
-				<turretDef>MAU_AP_Turret</turretDef>
+				<turretDef>MUGV_RP_Turret</turretDef>
 				<littleCooldown>5</littleCooldown>
 				<!-- 连射冷却 -->
-				<extraShootCount>0</extraShootCount>
+				<extraShootCount>1</extraShootCount>
 				<!-- 额外射击次数 -->
-				<warmupTime>300</warmupTime>
+				<warmupTime>500</warmupTime>
 				<!-- 冷却时间 -->
 				<angleOffset>-90</angleOffset>
 				<autoAttack>false</autoAttack>
@@ -29,7 +29,7 @@
 					<li>
 						<nodeClass>RTS.PawnRenderNode_TurretGun</nodeClass>
 						<workerClass>RTS.PawnRenderNodeWorker_TurretGun</workerClass>
-						<overrideMeshSize>(5.9, 5.9)</overrideMeshSize>
+						<overrideMeshSize>(2.1, 2.1)</overrideMeshSize>
 						<parentTagDef>Body</parentTagDef>
 						<baseLayer>20</baseLayer>
 						<pawnType>Any</pawnType>
@@ -49,10 +49,10 @@
 
 
 	<PawnKindDef ParentName="MediumUnitKind">
-		<defName>MAU_AP</defName>
-		<label>MAU_AP</label>
-		<labelPlural>MAU_AP</labelPlural>
-		<race>MAU_AP</race>
+		<defName>MUGV_RP</defName>
+		<label>MUGV_RP</label>
+		<labelPlural>MUGV_RP</labelPlural>
+		<race>MUGV_RP</race>
 		<weaponTags>
 		</weaponTags>
 	</PawnKindDef>
@@ -61,34 +61,39 @@
 
 
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>MAU_AP_Turret</defName>
-		<label>MAU_AP_Turret</label>
-		<description>MAU_AP_Turret.</description>
+		<defName>MUGV_RP_Turret</defName>
+		<label>MUGV_RP_Turret</label>
+		<description>MUGV_RP_Turret.</description>
 		<tradeability>None</tradeability>
 		<!-- 无法交易 -->
 		<destroyOnDrop>true</destroyOnDrop>
 		<!-- 抛弃时销毁 -->
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/MAU_AP_Turret</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/MUGV_RP_Turret</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
 			<Mass>2.6</Mass>
-			<AccuracyTouch>0.20</AccuracyTouch>
-			<AccuracyShort>0.90</AccuracyShort>
-			<AccuracyMedium>1.00</AccuracyMedium>
-			<AccuracyLong>0.95</AccuracyLong>
+			<!-- 质量为 2.6 单位 -->
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<!-- 触摸精度为 0.60 -->
+			<AccuracyShort>0.50</AccuracyShort>
+			<!-- 短距离精度为 0.80 -->
+			<AccuracyMedium>0.30</AccuracyMedium>
+			<!-- 中距离精度为 0.90 -->
+			<AccuracyLong>0.1</AccuracyLong>
+			<!-- 长距离精度为 0.85 -->
 		</statBases>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<!-- 动作类 -->
-				<defaultProjectile>Bullet_MAU_AP</defaultProjectile>
+				<defaultProjectile>Bullet_Rocket</defaultProjectile>
 				<!-- 弹药类型 -->
-				<forcedMissRadius>0.01</forcedMissRadius>
-				<range>100</range>
+				<forcedMissRadius>5</forcedMissRadius>
+				<range>35</range>
 				<!-- 射程 -->
-				<soundCast>ATlaunch</soundCast>
+				<soundCast>Shot_ChargeBlaster</soundCast>
 				<!-- 发射时的声音效果 -->
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<!-- 发射尾声声音效果 -->
@@ -108,12 +113,6 @@
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
-				<!-- 准备发射声音 -->
-				<soundAiming>AT_Aiming</soundAiming>
-				<!-- 最小射程 -->
-				<minRange>10</minRange>
-				<!-- 目标特效 -->
-				<aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
 				<!-- AI 避免友军火力半径 -->
 				<ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
 				<!-- AI 是建筑破坏者 -->
@@ -121,12 +120,5 @@
 			</li>
 		</verbs>
 	</ThingDef>
-
-
-
-
-
-
-
 
 </Defs>

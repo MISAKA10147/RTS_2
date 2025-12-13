@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+	<PawnKindDef Name="EngineerUnitKind" ParentName="BaseUnitKind" Abstract="True">
+		<!-- 生成武器预算 -->
+		<weaponMoney>9999~9999</weaponMoney>
+		<!-- 战斗力。 -->
+		<combatPower>5</combatPower>
+		<!-- 武器标签 -->
+		<weaponTags></weaponTags>
+		<!-- 安装Hediff概率 -->
+		<techHediffsChance>1</techHediffsChance>
+		<!-- 预算 -->
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+		<!-- 控制组缩放比例 -->
+		<controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+
+		<allowInMechClusters>false</allowInMechClusters>
+		<!-- 不允许加入机甲集群 -->
+		<forceNoDeathNotification>true</forceNoDeathNotification>
+		<!-- 强制不发送死亡通知 -->
+		<forceDeathOnDowned>true</forceDeathOnDowned>
+		<!-- 被击倒后立即死亡 -->
+		<allowOldAgeInjuries>false</allowOldAgeInjuries>
+		<!-- 衰老而受伤 -->
+		<lifeStages>
+			<!-- 生命周期阶段定义 -->
+			<li>
+				<!-- 第一生命周期阶段 -->
+				<bodyGraphicData>
+					<!-- 身体图形数据 -->
+					<texPath>Things/Pawn/Unit/MCRU/MCRU</texPath>
+					<!-- 图形纹理路径 -->
+					<maskPath>Things/Pawn/Unit/MCRU/Overlays/MCRU</maskPath>
+					<!-- 掩膜纹理路径 -->
+					<shaderType>CutoutWithOverlay</shaderType>
+					<!-- 使用带有掩膜的剪切着色器 -->
+					<graphicClass>Graphic_Multi</graphicClass>
+					<!-- 使用多层图形类 -->
+					<drawSize>3</drawSize>
+					<!-- 绘制尺寸 -->
+					<shadowData>
+						<!-- 阴影数据 -->
+						<volume>(0.5, 0.8, 0.5)</volume>
+						<!-- 阴影体积 -->
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<!-- 第二生命周期阶段 -->
+				<bodyGraphicData>
+					<!-- 身体图形数据 -->
+					<texPath>Things/Pawn/Unit/MCRU/MCRU</texPath>
+					<!-- 古老版图形纹理路径 -->
+					<maskPath>Things/Pawn/Unit/MCRU/Overlays/MCRU</maskPath>
+					<!-- 掩膜纹理路径 -->
+					<shaderType>CutoutWithOverlay</shaderType>
+					<!-- 使用带有掩膜的剪切着色器 -->
+					<graphicClass>Graphic_Multi</graphicClass>
+					<!-- 使用多层图形类 -->
+					<drawSize>3</drawSize>
+					<!-- 绘制尺寸 -->
+					<shadowData>
+						<!-- 阴影数据 -->
+						<volume>(0.5, 0.8, 0.5)</volume>
+						<!-- 阴影体积 -->
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	
+	
+	
+	<ThingDef ParentName="LightUnit">
+		<defName>MCRU</defName>
+		<label>MCRU</label>
+		<description>Mobile construction and repair units.</description>
+		<statBases>
+			<MarketValue>1200</MarketValue>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<MoveSpeed>6</MoveSpeed>
+			<EMPResistance>0</EMPResistance>
+			<!-- 对EMP（电磁脉冲）的抵抗力 -->
+			<MeleeDoorDamageFactor>4</MeleeDoorDamageFactor>
+			<!-- 近战对门的伤害系数 -->
+		</statBases>
+		<race>
+			<baseHealthScale>2</baseHealthScale>
+			<mechFixedSkillLevel>6</mechFixedSkillLevel>
+			<baseBodySize>1</baseBodySize>
+			<mechEnabledWorkTypes>
+				<li>Construction</li>
+				<li>Crafting</li>
+				<li>Smithing</li>
+				<li>Cleaning</li>
+				<li>Hauling</li>
+				<li>PlantCutting</li>
+				<li>Growing</li>
+				<li>Mining</li>
+			</mechEnabledWorkTypes>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="EngineerUnitKind">
+		<defName>MCRU</defName>
+		<label>MCRU</label>
+		<labelPlural>MCRU</labelPlural>
+		<race>MCRU</race>
+		<weaponTags>
+		</weaponTags>
+	</PawnKindDef>
+
+
+</Defs>

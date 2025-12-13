@@ -41,8 +41,8 @@
 
 	<!--————————————————————————————穿甲弹——————————————————-->
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_MAU_AP</defName>
-		<label>Bullet_MAU_AP</label>
+		<defName>Bullet_MUGV_AP</defName>
+		<label>Bullet_MUGV_AP</label>
 		<graphicData>
 			<texPath>Things/Projectile/ShellHighExplosive</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -78,8 +78,8 @@
 
 	<!--————————————————————————————小单位单格emp——————————————————-->
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_LAU_emp</defName>
-		<label>Bullet_LAU_emp</label>
+		<defName>Bullet_LUGV_emp</defName>
+		<label>Bullet_LUGV_emp</label>
 		<graphicData>
 			<texPath>Things/Projectile/ShellEMP</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

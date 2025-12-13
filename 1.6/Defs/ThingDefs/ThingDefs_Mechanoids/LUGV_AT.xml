@@ -2,9 +2,9 @@
 <Defs>
 
 	<ThingDef ParentName="LightUnit">
-		<defName>LAU_AT</defName>
-		<label>LAU_AT</label>
-		<description>Light attack unit.</description>
+		<defName>LUGV_AT</defName>
+		<label>LUGV_AT</label>
+		<description>Light Unmanned ground vehicles.</description>
 		<statBases>
 			<MoveSpeed>6</MoveSpeed>
 			<!-- 移动速度 -->
@@ -18,7 +18,7 @@
 			</li>
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
-				<turretDef>LAU_AT_Turret</turretDef>
+				<turretDef>LUGV_AT_Turret</turretDef>
 				<littleCooldown>5</littleCooldown>
 				<!-- 连射冷却 -->
 				<extraShootCount>0</extraShootCount>
@@ -62,10 +62,10 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="LightUnitKind">
-		<defName>LAU_AT</defName>
-		<label>LAU_AT</label>
-		<labelPlural>LAU_AT</labelPlural>
-		<race>LAU_AT</race>
+		<defName>LUGV_AT</defName>
+		<label>LUGV_AT</label>
+		<labelPlural>LUGV_AT</labelPlural>
+		<race>LUGV_AT</race>
 		<weaponTags>
 		</weaponTags>
 	</PawnKindDef>
@@ -73,15 +73,15 @@
 
 
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>LAU_AT_Turret</defName>
-		<label>LAU_AT_Turret</label>
-		<description>LAU_AT_Turret.</description>
+		<defName>LUGV_AT_Turret</defName>
+		<label>LUGV_AT_Turret</label>
+		<description>LUGV_AT_Turret.</description>
 		<tradeability>None</tradeability>
 		<!-- 无法交易 -->
 		<destroyOnDrop>true</destroyOnDrop>
 		<!-- 抛弃时销毁 -->
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/LAU_MG_Turret</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/LUGV_MG_Turret</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>

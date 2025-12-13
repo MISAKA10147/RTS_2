@@ -2,40 +2,54 @@
 <Defs>
 
 	<ThingDef ParentName="LightUnit">
-		<defName>LAU_RP</defName>
-		<label>LAU_RP</label>
-		<description>Light attack unit1.</description>
+		<defName>LUGV_MG</defName>
+		<label>LUGV_MG</label>
+		<description>Light attack unit.</description>
 		<statBases>
-			<MoveSpeed>4</MoveSpeed>
+			<MoveSpeed>6</MoveSpeed>
 			<!-- 移动速度 -->
 		</statBases>
+		<race>
+		</race>
 		<comps>
 			<li Class="RTS.UnitCompProperties">
-				<mass>20</mass>
+				<mass>10</mass>
 				<cost>5</cost>
 			</li>
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
-				<turretDef>LAU_RP_Turret</turretDef>
-				<littleCooldown>0</littleCooldown>
+				<turretDef>LUGV_MG_Turret</turretDef>
+				<littleCooldown>5</littleCooldown>
 				<!-- 连射冷却 -->
-				<extraShootCount>0</extraShootCount>
+				<extraShootCount>5</extraShootCount>
 				<!-- 额外射击次数 -->
-				<warmupTime>300</warmupTime>
+				<warmupTime>100</warmupTime>
 				<!-- 冷却时间 -->
 				<angleOffset>-90</angleOffset>
+				<!-- 角度偏移 -90 度 -->
 				<autoAttack>false</autoAttack>
+				<!-- 自动攻击 -->
 				<renderNodeProperties>
+					<!-- 渲染节点属性 -->
 					<li>
+						<!-- 渲染节点 -->
 						<nodeClass>RTS.PawnRenderNode_TurretGun</nodeClass>
+						<!-- 节点类 -->
 						<workerClass>RTS.PawnRenderNodeWorker_TurretGun</workerClass>
-						<overrideMeshSize>(1.5, 1.5)</overrideMeshSize>
+						<!-- 工作者类 -->
+						<overrideMeshSize>(1.9, 1.9)</overrideMeshSize>
+						<!-- 替换网格大小 -->
 						<parentTagDef>Body</parentTagDef>
+						<!-- 父标签定义 -->
 						<baseLayer>20</baseLayer>
+						<!-- 基础层级 -->
 						<pawnType>Any</pawnType>
+						<!-- 单位类型为任意 -->
 						<drawData>
+							<!-- 绘制数据 -->
 							<dataWest>
 								<rotationOffset>180</rotationOffset>
+								<!-- 旋转偏移 180 度 -->
 							</dataWest>
 						</drawData>
 					</li>
@@ -47,34 +61,32 @@
 		</killedLeavingsPlayerHostile>
 	</ThingDef>
 
-
 	<PawnKindDef ParentName="LightUnitKind">
-		<defName>LAU_RP</defName>
-		<label>LAU_RP</label>
-		<labelPlural>LAU_RP</labelPlural>
-		<race>LAU_RP</race>
+		<defName>LUGV_MG</defName>
+		<label>LUGV_MG</label>
+		<labelPlural>LUGV_MG</labelPlural>
+		<race>LUGV_MG</race>
+		<combatPower>30</combatPower>
 		<weaponTags>
 		</weaponTags>
 	</PawnKindDef>
 
 
 
-
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>LAU_RP_Turret</defName>
-		<label>LAU_RP_Turret</label>
-		<description>LAU_RP_Turret.</description>
+		<defName>LUGV_MG_Turret</defName>
+		<label>LUGV_MG_Turret</label>
+		<description>LUGV_MG_Turret.</description>
 		<tradeability>None</tradeability>
 		<!-- 无法交易 -->
 		<destroyOnDrop>true</destroyOnDrop>
 		<!-- 抛弃时销毁 -->
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/LAU_RP_Turret</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/LUGV_MG_Turret</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
 			<Mass>2.6</Mass>
-			<!-- 质量为 2.6 单位 -->
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<!-- 触摸精度为 0.60 -->
 			<AccuracyShort>0.80</AccuracyShort>
@@ -88,27 +100,25 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<!-- 动作类 -->
-				<defaultProjectile>Bullet_Rocket</defaultProjectile>
+				<defaultProjectile>Bullet_ChargeBlasterHeavy</defaultProjectile>
 				<!-- 弹药类型 -->
-				<forcedMissRadius>1</forcedMissRadius>
-				<range>40</range>
+				<range>26</range>
 				<!-- 射程 -->
 				<soundCast>Shot_ChargeBlaster</soundCast>
 				<!-- 发射时的声音效果 -->
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<!-- 发射尾声声音效果 -->
 				<muzzleFlashScale>9</muzzleFlashScale>
-				<!-- 枪口闪光比例 -->
-				<defaultCooldownTime>0</defaultCooldownTime>
+				<!-- 枪口闪光 -->
+				<defaultCooldownTime>3</defaultCooldownTime>
 				<!-- 冷却时间 -->
-				<warmupTime>0</warmupTime>
-				<!-- 准备射击的时间 -->
 				<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
 				<!-- 关联的身体部位组 BulbTurret -->
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 				<!-- 确保关联的身体部位组始终可用 -->
-				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
 				<!-- 连射间隔 -->
+				<!-- 每次连发数量 -->
 				<burstShotCount>1</burstShotCount>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>

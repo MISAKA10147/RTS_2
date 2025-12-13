@@ -161,7 +161,7 @@
 						<unitDesc>Light attack unit1</unitDesc>
 					</li>
 					<li>
-						<kind>LAU_AT</kind>
+						<kind>LUGV_AT</kind>
 						<spawnTime>100</spawnTime>
 						<type>RTS_LightUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
@@ -170,7 +170,7 @@
 						</traits>
 					</li>
 					<li>
-						<kind>LAU_MG</kind>
+						<kind>LUGV_MG</kind>
 						<spawnTime>200</spawnTime>
 						<type>RTS_LightUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
@@ -179,7 +179,7 @@
 						</traits>
 					</li>
 					<li>
-						<kind>LAU_RP</kind>
+						<kind>LUGV_RP</kind>
 						<spawnTime>600</spawnTime>
 						<type>RTS_LightUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
@@ -188,27 +188,33 @@
 						</traits>
 					</li>
 					<li>
-						<kind>LAU_emp</kind>
+						<kind>LUGV_emp</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_LightUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
 					</li>
 					<li>
-						<kind>MAU_RP</kind>
+						<kind>MUGV_RP</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_MediumUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
 					</li>
 					<li>
-						<kind>MAU_AP</kind>
+						<kind>MUGV_AP</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_MediumUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
 					</li>
 					<li>
-						<kind>MAU_HEL</kind>
+						<kind>MUGV_HEL</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_MediumUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+					</li>
+					<li>
+						<kind>MCRU</kind>
+						<spawnTime>400</spawnTime>
+						<type>RTS_SpecialUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
 					</li>
 				</units>

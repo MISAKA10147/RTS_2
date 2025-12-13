@@ -2,8 +2,8 @@
 <Defs>
 
 	<ThingDef ParentName="MediumUnit">
-		<defName>MAU_HEL</defName>
-		<label>MAU_HEL</label>
+		<defName>MUGV_HEL</defName>
+		<label>MUGV_HEL</label>
 		<description>Medium attack unit1.</description>
 		<statBases>
 			<MoveSpeed>2.5</MoveSpeed>
@@ -16,7 +16,7 @@
 			</li>
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
-				<turretDef>MAU_HEL_Turret</turretDef>
+				<turretDef>MUGV_HEL_Turret</turretDef>
 				<littleCooldown>1</littleCooldown>
 				<!-- 连射冷却 -->
 				<extraShootCount>30</extraShootCount>
@@ -49,10 +49,10 @@
 
 
 	<PawnKindDef ParentName="MediumUnitKind">
-		<defName>MAU_HEL</defName>
-		<label>MAU_HEL</label>
-		<labelPlural>MAU_HEL</labelPlural>
-		<race>MAU_HEL</race>
+		<defName>MUGV_HEL</defName>
+		<label>MUGV_HEL</label>
+		<labelPlural>MUGV_HEL</labelPlural>
+		<race>MUGV_HEL</race>
 		<weaponTags>
 		</weaponTags>
 	</PawnKindDef>
@@ -61,15 +61,15 @@
 
 
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>MAU_HEL_Turret</defName>
-		<label>MAU_HEL_Turret</label>
-		<description>MAU_HEL_Turret.</description>
+		<defName>MUGV_HEL_Turret</defName>
+		<label>MUGV_HEL_Turret</label>
+		<description>MUGV_HEL_Turret.</description>
 		<tradeability>None</tradeability>
 		<!-- 无法交易 -->
 		<destroyOnDrop>true</destroyOnDrop>
 		<!-- 抛弃时销毁 -->
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/MAU_HEL_Turret</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/MUGV_HEL_Turret</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>

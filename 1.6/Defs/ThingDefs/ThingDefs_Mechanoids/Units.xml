@@ -206,22 +206,22 @@
 
 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 
 
-	
-	
-	
 
+
+
+
+
+
+
+
+
+
+
+
+	<!--轻型单位 -->
 	<ThingDef Name="LightUnit" ParentName="BaseUnit" Abstract="True">
 		<statBases>
 			<!-- 市场价值 -->
@@ -237,7 +237,7 @@
 		<race>
 			<body>Unit_Light</body>
 			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>1</baseHealthScale>
+			<baseHealthScale>0.5</baseHealthScale>
 			<!-- 基础生命值比例 -->
 			<hasCorpse>false</hasCorpse>
 			<!-- 无尸体 -->
@@ -327,9 +327,9 @@
 				<!-- 第一生命周期阶段 -->
 				<bodyGraphicData>
 					<!-- 身体图形数据 -->
-					<texPath>Things/Pawn/Unit/LAU/LAU</texPath>
+					<texPath>Things/Pawn/Unit/LUGV/LUGV</texPath>
 					<!-- 图形纹理路径 -->
-					<maskPath>Things/Pawn/Unit/LAU/Overlays/LAU</maskPath>
+					<maskPath>Things/Pawn/Unit/LUGV/Overlays/LUGV</maskPath>
 					<!-- 掩膜纹理路径 -->
 					<shaderType>CutoutWithOverlay</shaderType>
 					<!-- 使用带有掩膜的剪切着色器 -->
@@ -348,9 +348,9 @@
 				<!-- 第二生命周期阶段 -->
 				<bodyGraphicData>
 					<!-- 身体图形数据 -->
-					<texPath>Things/Pawn/Unit/LAU/LAU</texPath>
+					<texPath>Things/Pawn/Unit/LUGV/LUGV</texPath>
 					<!-- 古老版图形纹理路径 -->
-					<maskPath>Things/Pawn/Unit/LAU/Overlays/LAU</maskPath>
+					<maskPath>Things/Pawn/Unit/LUGV/Overlays/LUGV</maskPath>
 					<!-- 掩膜纹理路径 -->
 					<shaderType>CutoutWithOverlay</shaderType>
 					<!-- 使用带有掩膜的剪切着色器 -->
@@ -397,7 +397,7 @@
 		<race>
 			<body>Unit_Light</body>
 			<baseBodySize>3</baseBodySize>
-			<baseHealthScale>3</baseHealthScale>
+			<baseHealthScale>2</baseHealthScale>
 			<!-- 基础生命值比例 -->
 			<hasCorpse>false</hasCorpse>
 			<!-- 无尸体 -->
@@ -487,9 +487,9 @@
 				<!-- 第一生命周期阶段 -->
 				<bodyGraphicData>
 					<!-- 身体图形数据 -->
-					<texPath>Things/Pawn/Unit/MAU/MAU</texPath>
+					<texPath>Things/Pawn/Unit/MUGV/MUGV</texPath>
 					<!-- 图形纹理路径 -->
-					<maskPath>Things/Pawn/Unit/MAU/Overlays/MAU</maskPath>
+					<maskPath>Things/Pawn/Unit/MUGV/Overlays/MUGV</maskPath>
 					<!-- 掩膜纹理路径 -->
 					<shaderType>CutoutWithOverlay</shaderType>
 					<!-- 使用带有掩膜的剪切着色器 -->
@@ -508,9 +508,9 @@
 				<!-- 第二生命周期阶段 -->
 				<bodyGraphicData>
 					<!-- 身体图形数据 -->
-					<texPath>Things/Pawn/Unit/MAU/MAU</texPath>
+					<texPath>Things/Pawn/Unit/MUGV/MUGV</texPath>
 					<!-- 古老版图形纹理路径 -->
-					<maskPath>Things/Pawn/Unit/MAU/Overlays/MAU</maskPath>
+					<maskPath>Things/Pawn/Unit/MUGV/Overlays/MUGV</maskPath>
 					<!-- 掩膜纹理路径 -->
 					<shaderType>CutoutWithOverlay</shaderType>
 					<!-- 使用带有掩膜的剪切着色器 -->
