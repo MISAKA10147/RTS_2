@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <RTS.UnitTypeDef>
+        <defName>RTS_LightUnits</defName>
+        <label>Light</label>
+        <iconPath>UI/LightUnits</iconPath>
+    </RTS.UnitTypeDef>
+
+	<RTS.UnitTypeDef>
+		<defName>RTS_MediumUnits</defName>
+		<label>Medium</label>
+		<iconPath>UI/MediumUnits</iconPath>
+	</RTS.UnitTypeDef>
+
+	<RTS.UnitTypeDef>
+		<defName>RTS_SpecialUnits</defName>
+		<label>Special</label>
+		<iconPath>UI/SpecialUnits</iconPath>
+	</RTS.UnitTypeDef>
+
+	<RTS.UnitTypeDef>
+		<defName>RTS_BuildingUnits</defName>
+		<label>Building</label>
+		<iconPath>UI/BuildingUnits</iconPath>
+	</RTS.UnitTypeDef>
+
+
+</Defs>

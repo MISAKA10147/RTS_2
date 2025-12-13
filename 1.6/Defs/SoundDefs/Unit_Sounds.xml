@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+
+
+	<!-- 单位死亡 -->
+	<SoundDef>
+		<defName>Unit_Death</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>5</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>unit_death</clipPath>
+					</li>
+				</grains>
+				<volumeRange>20</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	
+	
+	
+</Defs>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- 单元底盘 -->
+	<BodyPartDef Name="Electric_Unit">
+		<defName>Electric_Unit</defName>
+		<label>单元底盘</label>
+		<hitPoints>200</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+	</BodyPartDef>
+
+
+	<!-- 演算核心 -->
+	<BodyPartDef>
+		<defName>U_Algorithm_Core</defName>
+		<label>演算核心</label>
+		<hitPoints>30</hitPoints>
+		<frostbiteVulnerability>2</frostbiteVulnerability>    <!-- 对霜冻伤害 -->
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>    <!-- 永久性损伤 -->
+		<skinCovered>false</skinCovered>    <!-- 皮肤覆盖 -->
+		<solid>true</solid> <!-- 刚性 -->
+		<alive>false</alive> <!-- 活的 -->
+		<bleedRate>0</bleedRate>    <!-- 出血率 -->
+		<!-- 意识 -->
+		<tags>
+			<li>ConsciousnessSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<!-- 观瞄 -->
+	<BodyPartDef>
+		<defName>U_Observation_system</defName>
+		<label>观瞄系统</label>
+		<hitPoints>30</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<!-- 视觉听觉 -->
+		<tags>
+			<li>SightSource</li>
+			<li>HearingSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<!-- 动力电池包 -->
+	<BodyPartDef>
+		<defName>U_Powerpack</defName>
+		<label>动力电池包Power battery pack</label>
+		<hitPoints>30</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>BloodPumpingSource</li>
+			<li>BloodFiltrationSource</li>
+		</tags>
+	</BodyPartDef>
+
+
+	<!-- 机械臂 -->
+	<BodyPartDef>
+		<defName>U_Physical_interaction_system</defName>
+		<label>物理交互系统</label>
+		<hitPoints>50</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>ManipulationLimbDigit</li>
+			<li>ManipulationLimbSegment</li>
+			<li>ManipulationLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+
+
+	<!-- 轮胎/履带 -->
+	<BodyPartDef>
+		<defName>U_Mobile_mechanism</defName>
+		<label>移动机构</label>
+		<hitPoints>100</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+	<!-- 结构块 -->
+	<BodyPartDef>
+		<defName>U_Structural_block</defName>
+		<label>结构块</label>
+		<hitPoints>200</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+	</BodyPartDef>
+
+
+
+</Defs>

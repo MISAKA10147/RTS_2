@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>RTS_Fill</defName>
+    <driverClass>RTS.JobDriver_Fill</driverClass>
+    <reportString>Filling.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>RTS_Return</defName>
+    <driverClass>RTS.JobDriver_ReturnHive</driverClass>
+    <reportString>Returning.</reportString>
+    <suspendable>false</suspendable>
+  </JobDef>
+
+
+</Defs>

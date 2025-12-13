@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <RTS_Cost>Cost：{0}/{1}</RTS_Cost>
+  <RTS_Mass>钢铁：{0}/{1}</RTS_Mass>
+
+  <RTS_Build>建筑</RTS_Build>
+  <RTS_Launch>发射</RTS_Launch>
+</LanguageData>

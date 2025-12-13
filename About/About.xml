@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>MPCU</name>
+  <author>saya.HaiLuan</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>
+	  蜂巢
+	  
+	  hive
+  </description>
+  <packageId>saya.rts</packageId>
+
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Odyssey</packageId>
+			<displayName>Odyssey</displayName>
+		</li>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+		</li>
+	</modDependencies>
+
+	<loadAfter>
+		<li>Ludeon.RimWorld.Odyssey</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+	</loadAfter>
+	
+</ModMetaData>

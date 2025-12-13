@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<BodyDef>
+		<defName>Unit_Light</defName>
+		<label>light Unit</label>
+		<corePart>
+			<def>Electric_Unit</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<parts>
+				<!-- 结构块 -->
+				<li>
+					<def>U_Structural_block</def>
+					<coverage>0.35</coverage>
+					<depth>Outside</depth>
+					<groups>
+						<li>HeadAttackTool</li>
+					</groups>
+				</li>
+				<!-- 结构块 -->
+				<li>
+					<def>U_Structural_block</def>
+					<coverage>0.35</coverage>
+					<depth>Outside</depth>
+					<groups>
+						<li>HeadAttackTool</li>
+					</groups>
+				</li>
+				<!-- 内部结构块 -->
+				<li>
+					<def>U_Structural_block</def>
+					<customLabel>内部结构块</customLabel>
+					<coverage>0.1</coverage>
+					<depth>Inside</depth>
+					<parts>
+						<!-- 演算核心 -->
+						<li>
+							<def>U_Algorithm_Core</def>
+							<customLabel></customLabel>
+							<coverage>0.001</coverage>
+							<depth>Inside</depth>
+						</li>
+						<!-- 观瞄 -->
+						<li>
+							<def>MechanicalNeck</def>
+							<coverage>0.03</coverage>
+							<height>Top</height>
+							<parts>
+								<li>
+									<def>U_Observation_system</def>
+									<coverage>0.30</coverage>
+								</li>
+							</parts>
+						</li>
+						<!-- 电池动力包 -->
+						<li>
+							<def>U_Powerpack</def>
+							<coverage>0.03</coverage>
+							<depth>Inside</depth>
+						</li>
+					</parts>
+				</li>
+				<!-- 机械臂 -->
+				<li>
+					<def>U_Physical_interaction_system</def>
+					<coverage>0.02</coverage>
+					<depth>Outside</depth>
+				</li>
+				<!-- 轮胎 -->
+				<li>
+					<def>U_Mobile_mechanism</def>
+					<coverage>0.05</coverage>
+					<height>Bottom</height>
+				</li>
+				<!-- 炮塔 -->
+				<li>
+					<def>BulbTurret</def>
+					<customLabel>bulb turret</customLabel>
+					<coverage>0.03</coverage>
+					<groups>
+						<li>BulbTurret</li>
+					</groups>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+
+
+
+
+
+
+</Defs>

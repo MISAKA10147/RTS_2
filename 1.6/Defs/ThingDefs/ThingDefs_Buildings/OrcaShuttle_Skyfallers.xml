@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>MPCU_Incoming</defName>
+    <label>MPCU (incoming)</label>
+    <thingClass>PassengerShuttleIncoming</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/MPCU/MPCU_ship/MPCU_ship</texPath>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(9.6,12)</drawSize>
+    </graphicData>
+    <skyfaller>
+		<anticipationSound>Shuttle_Landing</anticipationSound>
+		<!-- 预警声音 -->
+		<anticipationSoundTicks>250</anticipationSoundTicks>
+		<!-- 预警声音持续刻数 -->
+		<ticksToImpactRange>200~250</ticksToImpactRange>
+		<!-- 影响范围刻数 -->
+		<shadowSize>(3.5,5.5)</shadowSize>
+		<!-- 影子大小 -->
+		<rotationCurve>
+			<points>
+				<li>(0,30)</li>
+				<!-- 旋转曲线点 -->
+				<li>(0.5,5)</li>
+				<!-- 旋转曲线点 -->
+				<li>(0.9,-5)</li>
+				<!-- 旋转曲线点 -->
+				<li>(0.95,0)</li>
+				<!-- 旋转曲线点 -->
+			</points>
+		</rotationCurve>
+		<zPositionCurve>
+			<points>
+				<li>(0.95,2.5)</li>
+				<!-- Z位置曲线点 -->
+				<li>(1,0)</li>
+				<!-- Z位置曲线点 -->
+			</points>
+		</zPositionCurve>
+		<speedCurve>
+			<points>
+				<li>(0.6,0.6)</li>
+				<!-- 速度曲线点 -->
+				<li>(19.95,19.94)</li>
+				<!-- 速度曲线点 -->
+			</points>
+		</speedCurve>
+	</skyfaller>
+</ThingDef>
+
+<ThingDef ParentName="ShuttleSkyfallerBase">
+	<defName>MPCU_Leaving</defName>
+	<!-- 唯一标识符 -->
+	<label>MPCU (leaving)</label>
+	<!-- 显示名称 -->
+	<thingClass>PassengerShuttleLeaving</thingClass>
+	<!-- 事物类型 -->
+	<rotatable>true</rotatable>
+	<!-- 是否可旋转 -->
+	<graphicData>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<!-- 图形类 -->
+		<texPath>Things/Building/MPCU/MPCU_ship/MPCU_ship</texPath>
+		<!-- 贴图路径 -->
+		<shaderType>CutoutComplex</shaderType>
+		<!-- 着色器类型 -->
+		<drawSize>(9.6,12)</drawSize>
+		<!-- 绘制尺寸 -->
+	</graphicData>
+	<skyfaller>
+		<reversed>true</reversed>
+		<!-- 是否反转 -->
+		<anticipationSound>Shuttle_Leaving</anticipationSound>
+		<!-- 预警声音 -->
+		<anticipationSoundTicks>-10</anticipationSoundTicks>
+		<!-- 预警声音持续刻数 -->
+		<ticksToImpactRange>-40~-15</ticksToImpactRange>
+		<!-- 影响范围刻数 -->
+		<moteSpawnTime>0.05</moteSpawnTime>
+		<!-- 泡沫生成时间 -->
+		<shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+		<!-- 影子贴图 -->
+		<shadowSize>(3.5,5.5)</shadowSize>
+		<!-- 影子大小 -->
+		<motesPerCell>1</motesPerCell>
+		<!-- 每个单元格泡沫数量 -->
+		<rotationCurve>
+			<points>
+				<li>(0,0)</li>
+				<!-- 旋转曲线点 -->
+				<li>(0.01,2)</li>
+				<!-- 旋转曲线点 -->
+				<li>(0.15,2)</li>
+				<!-- 旋转曲线点 -->
+				<li>(0.5,-5)</li>
+				<!-- 旋转曲线点 -->
+			</points>
+		</rotationCurve>
+		<zPositionCurve>
+			<points>
+				<li>(0,0)</li>
+				<!-- Z位置曲线点 -->
+				<li>(0.29,15)</li>
+				<!-- Z位置曲线点 -->
+			</points>
+		</zPositionCurve>
+		<speedCurve>
+			<points>
+				<li>(0,0.000002)</li>
+				<!-- 速度曲线点 -->
+				<li>(0.6,0.7)</li>
+				<!-- 速度曲线点 -->
+			</points>
+		</speedCurve>
+	</skyfaller>
+</ThingDef>
+
+<WorldObjectDef ParentName="ShuttleWorldObjectBase">
+	<defName>MPCU_shipObject</defName>
+	<!-- 唯一标识符 -->
+	<label>MPCU</label>
+	<!-- 显示名称 -->
+	<description>Mobile industrial units.</description>
+	<!-- 描述 -->
+	<expandingIconTexture>Things/Building/MPCU/MPCU_sign</expandingIconTexture>
+	<!-- 扩展图标贴图 -->
+	<expandingIconDrawSize>1.5</expandingIconDrawSize>
+	<!-- 扩展图标绘制大小 -->
+</WorldObjectDef>
+  
+</Defs>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="MediumUnit">
+		<defName>MAU_AP</defName>
+		<label>MAU_AP</label>
+		<description>Medium attack unit1.</description>
+		<statBases>
+			<MoveSpeed>3</MoveSpeed>
+			<!-- 移动速度 -->
+		</statBases>
+		<comps>
+			<li Class="RTS.UnitCompProperties">
+				<mass>200</mass>
+				<cost>20</cost>
+			</li>
+			<li Class="RTS.CompProperties_TurretGun">
+				<!-- 添加炮塔枪组件 -->
+				<turretDef>MAU_AP_Turret</turretDef>
+				<littleCooldown>5</littleCooldown>
+				<!-- 连射冷却 -->
+				<extraShootCount>0</extraShootCount>
+				<!-- 额外射击次数 -->
+				<warmupTime>300</warmupTime>
+				<!-- 冷却时间 -->
+				<angleOffset>-90</angleOffset>
+				<autoAttack>false</autoAttack>
+				<renderNodeProperties>
+					<li>
+						<nodeClass>RTS.PawnRenderNode_TurretGun</nodeClass>
+						<workerClass>RTS.PawnRenderNodeWorker_TurretGun</workerClass>
+						<overrideMeshSize>(5.9, 5.9)</overrideMeshSize>
+						<parentTagDef>Body</parentTagDef>
+						<baseLayer>20</baseLayer>
+						<pawnType>Any</pawnType>
+						<drawData>
+							<dataWest>
+								<rotationOffset>180</rotationOffset>
+							</dataWest>
+						</drawData>
+					</li>
+				</renderNodeProperties>
+			</li>
+		</comps>
+		<killedLeavingsPlayerHostile>
+			<Steel>50</Steel>
+		</killedLeavingsPlayerHostile>
+	</ThingDef>
+
+
+	<PawnKindDef ParentName="MediumUnitKind">
+		<defName>MAU_AP</defName>
+		<label>MAU_AP</label>
+		<labelPlural>MAU_AP</labelPlural>
+		<race>MAU_AP</race>
+		<weaponTags>
+		</weaponTags>
+	</PawnKindDef>
+
+
+
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>MAU_AP_Turret</defName>
+		<label>MAU_AP_Turret</label>
+		<description>MAU_AP_Turret.</description>
+		<tradeability>None</tradeability>
+		<!-- 无法交易 -->
+		<destroyOnDrop>true</destroyOnDrop>
+		<!-- 抛弃时销毁 -->
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MAU_AP_Turret</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>2.6</Mass>
+			<AccuracyTouch>0.20</AccuracyTouch>
+			<AccuracyShort>0.90</AccuracyShort>
+			<AccuracyMedium>1.00</AccuracyMedium>
+			<AccuracyLong>0.95</AccuracyLong>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<!-- 动作类 -->
+				<defaultProjectile>Bullet_MAU_AP</defaultProjectile>
+				<!-- 弹药类型 -->
+				<forcedMissRadius>0.01</forcedMissRadius>
+				<range>100</range>
+				<!-- 射程 -->
+				<soundCast>ATlaunch</soundCast>
+				<!-- 发射时的声音效果 -->
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<!-- 发射尾声声音效果 -->
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<!-- 枪口闪光比例 -->
+				<defaultCooldownTime>0</defaultCooldownTime>
+				<!-- 冷却时间 -->
+				<warmupTime>0</warmupTime>
+				<!-- 准备射击的时间 -->
+				<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
+				<!-- 关联的身体部位组 BulbTurret -->
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<!-- 确保关联的身体部位组始终可用 -->
+				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+				<!-- 连射间隔 -->
+				<burstShotCount>1</burstShotCount>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<!-- 准备发射声音 -->
+				<soundAiming>AT_Aiming</soundAiming>
+				<!-- 最小射程 -->
+				<minRange>10</minRange>
+				<!-- 目标特效 -->
+				<aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+				<!-- AI 避免友军火力半径 -->
+				<ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+				<!-- AI 是建筑破坏者 -->
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			</li>
+		</verbs>
+	</ThingDef>
+
+
+
+
+
+
+
+
+</Defs>

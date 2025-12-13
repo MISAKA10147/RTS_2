@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RC_DroneHive</defName>
+		<label>蜂巢</label>
+		<description>蜂巢.</description>
+		<thingClass>Building</thingClass>
+		<!-- 地图网格和实时渲染 -->
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/RC_DroneHive/RC_DroneHive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2.5,2.5)</drawSize>
+			<shadowData>
+				<volume>(1.5,0.5,1.4)</volume>
+				<offset>(0,0,0)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.6,4,2.8)</rect>
+			</damageData>
+		</graphicData>
+		<!-- 是否投射边缘阴影 -->
+		<castEdgeShadows>true</castEdgeShadows>
+		<!-- 是否可以旋转 -->
+		<rotatable>false</rotatable>
+		<!-- 海拔层 -->
+		<altitudeLayer>Building</altitudeLayer>
+		<!-- 通过性 -->
+		<passability>PassThroughOnly</passability>
+		<!-- 移动成本 -->
+		<pathCost>50</pathCost>
+		<!-- 填充百分比 -->
+		<fillPercent>0.4</fillPercent>
+		<!-- 是否可以重叠区域 -->
+		<canOverlapZones>false</canOverlapZones>
+		<!-- 基础统计数据 -->
+		<statBases>
+			<!-- 最大生命值 -->
+			<MaxHitPoints>800</MaxHitPoints>
+			<!-- 构建所需工作量 -->
+			<WorkToBuild>2500</WorkToBuild>
+			<!-- 易燃性 -->
+			<Flammability>0.1</Flammability>
+		</statBases>
+		<!-- 计时器类型 -->
+		<tickerType>Normal</tickerType>
+		<!-- 大小 -->
+		<size>(2,2)</size>
+		<building>
+			<!-- 破坏声音 -->
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<!-- 成本列表 -->
+		<costList>
+			<Steel>200</Steel>
+		</costList>
+		<!-- 组件列表 -->
+		<inspectorTabs>
+			<li>RTS.ITab_HiveSystem</li>
+		</inspectorTabs>
+		<comps>
+			<!-- 动力组件 -->
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>500</basePowerConsumption>
+			</li>
+			<!-- 可被打断组件 -->
+			<li Class="CompProperties_Stunnable">
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<!-- 每刻钟受到EMP攻击的概率 -->
+				<empChancePerTick>0.03</empChancePerTick>
+				<!-- 影响的伤害类型 -->
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+			<li Class="RTS.CompPropertiesHiveSystem">
+				<costLimit>20</costLimit>
+				<!-- 人口 -->
+				<massLimit>200</massLimit>
+				<!-- 质量库存 -->
+				<massPerCount>1</massPerCount>
+				<!-- 钢铁对应的Mass -->
+				<healInterval>400</healInterval>
+				<!-- 维修间隔tick -->
+				<healMassPerUnit>2</healMassPerUnit>
+				<!-- 每个单元消耗的质量 -->
+				<healPointPerMass>2</healPointPerMass>
+				<!-- 每个质量对应的点数 -->
+				<massToRestorePart>2</massToRestorePart>
+				<!-- 肢体再生 -->
+				<recyclePercent>0.8</recyclePercent>
+				<!-- 销毁返还资源 -->
+				<units>
+					<li>
+						<kind>Bomb_Drone</kind>
+						<spawnTime>200</spawnTime>
+						<type>RTS_SpecialUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+					</li>
+				</units>
+			</li>
+		</comps>
+		<!-- 所需地形适配度 -->
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<!-- 设计分类 -->
+		<designationCategory>Odyssey</designationCategory>
+		<!-- UI排序顺序 -->
+		<uiOrder>2100</uiOrder>
+		<!-- 构造效果 -->
+		<constructEffect>ConstructMetal</constructEffect>
+		<uiIconScale>1</uiIconScale>
+	</ThingDef>
+	
+</Defs>

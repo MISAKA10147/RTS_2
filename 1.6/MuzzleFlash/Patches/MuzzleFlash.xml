@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Muzzle Flash</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!-- Light Weapons-->
+                <li Class="SafePatcher.PatchOperationSetModExtension">
+                    <xpath>Defs/ThingDef[defName="LAU_MG_Turret"]</xpath>
+                    <value>
+                        <li Class="MuzzleFlash.MuzzleFlashProps">
+                            <def>MF_ChargedMuzzleFalsh</def>
+                            <drawSize>(1.5,1.5)</drawSize>
+                            <offsets>
+                              <li>(0.5,0)</li>
+                            </offsets>
+                          </li>
+                    </value>
+                </li>
+                <li Class="SafePatcher.PatchOperationSetModExtension">
+                    <xpath>Defs/ThingDef[defName="MAU_AP_Turret"]</xpath>
+                    <value>
+                        <li Class="MuzzleFlash.MuzzleFlashProps">
+                            <def>MF_ChargedMuzzleFalsh</def>
+                            <drawSize>(1.5,1.5)</drawSize>
+                            <offsets>
+                              <li>(0.5,0)</li>
+                            </offsets>
+                          </li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

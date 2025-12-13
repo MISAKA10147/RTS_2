@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <WorkGiverDef>
+        <defName>RTS_WorkGiver_Fill</defName>
+        <label>fill</label>
+        <giverClass>RTS.WorkGiver_FillMass</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>fill</verb>
+        <gerund>filling</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>19</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+</Defs>

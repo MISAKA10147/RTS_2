@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="LightUnit">
+		<defName>LAU_AT</defName>
+		<label>LAU_AT</label>
+		<description>Light attack unit.</description>
+		<statBases>
+			<MoveSpeed>6</MoveSpeed>
+			<!-- 移动速度 -->
+		</statBases>
+		<race>
+		</race>
+		<comps>
+			<li Class="RTS.UnitCompProperties">
+				<mass>10</mass>
+				<cost>5</cost>
+			</li>
+			<li Class="RTS.CompProperties_TurretGun">
+				<!-- 添加炮塔枪组件 -->
+				<turretDef>LAU_AT_Turret</turretDef>
+				<littleCooldown>5</littleCooldown>
+				<!-- 连射冷却 -->
+				<extraShootCount>0</extraShootCount>
+				<!-- 额外射击次数 -->
+				<warmupTime>200</warmupTime>
+				<!-- 冷却时间 -->
+				<angleOffset>-90</angleOffset>
+				<!-- 角度偏移 -90 度 -->
+				<autoAttack>false</autoAttack>
+				<!-- 自动攻击 -->
+				<renderNodeProperties>
+					<!-- 渲染节点属性 -->
+					<li>
+						<!-- 渲染节点 -->
+						<nodeClass>RTS.PawnRenderNode_TurretGun</nodeClass>
+						<!-- 节点类 -->
+						<workerClass>RTS.PawnRenderNodeWorker_TurretGun</workerClass>
+						<!-- 工作者类 -->
+						<overrideMeshSize>(1.9, 1.9)</overrideMeshSize>
+						<!-- 替换网格大小 -->
+						<parentTagDef>Body</parentTagDef>
+						<!-- 父标签定义 -->
+						<baseLayer>20</baseLayer>
+						<!-- 基础层级 -->
+						<pawnType>Any</pawnType>
+						<!-- 单位类型为任意 -->
+						<drawData>
+							<!-- 绘制数据 -->
+							<dataWest>
+								<rotationOffset>180</rotationOffset>
+								<!-- 旋转偏移 180 度 -->
+							</dataWest>
+						</drawData>
+					</li>
+				</renderNodeProperties>
+			</li>
+		</comps>
+		<killedLeavingsPlayerHostile>
+			<Steel>50</Steel>
+		</killedLeavingsPlayerHostile>
+	</ThingDef>
+
+	<PawnKindDef ParentName="LightUnitKind">
+		<defName>LAU_AT</defName>
+		<label>LAU_AT</label>
+		<labelPlural>LAU_AT</labelPlural>
+		<race>LAU_AT</race>
+		<weaponTags>
+		</weaponTags>
+	</PawnKindDef>
+
+
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>LAU_AT_Turret</defName>
+		<label>LAU_AT_Turret</label>
+		<description>LAU_AT_Turret.</description>
+		<tradeability>None</tradeability>
+		<!-- 无法交易 -->
+		<destroyOnDrop>true</destroyOnDrop>
+		<!-- 抛弃时销毁 -->
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/LAU_MG_Turret</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>2.6</Mass>
+			<AccuracyTouch>1.50</AccuracyTouch>
+			<!-- 触摸精度为 0.60 -->
+			<AccuracyShort>1.50</AccuracyShort>
+			<!-- 短距离精度为 0.80 -->
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<!-- 中距离精度为 0.90 -->
+			<AccuracyLong>0.85</AccuracyLong>
+			<!-- 长距离精度为 0.85 -->
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_HEL</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>30</range>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<aimingChargeMote>Mote_BeamRepeater_Charge</aimingChargeMote>
+				<aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+			</li>
+		</verbs>
+	</ThingDef>
+
+</Defs>

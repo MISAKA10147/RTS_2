@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="RC_Turretbase">
+		<!-- 定义名 -->
+		<defName>Turret_RC_HEL</defName>
+		<!-- 显示标签 -->
+		<label>RC_HEL</label>
+		<!-- 描述信息 -->
+		<description>RC_HEL.</description>
+		<!-- UI图标路径 -->
+		<uiIconPath>UI/UnitIcon/Building/RC_RailgunIcon</uiIconPath>
+		<!-- 基础统计数据 -->
+		<statBases>
+			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+			<!-- 精准 -->
+		</statBases>
+		<!-- 成本列表 -->
+		<costList>
+			<Steel>500</Steel>
+		</costList>
+		<!-- 组件列表 -->
+		<comps>
+			<!-- 可爆炸组件 -->
+			<li Class="CompProperties_Explosive">
+				<wickTicks>240</wickTicks>
+				<explosiveRadius>5.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+			</li>
+			<!-- 可禁止使用组件 -->
+			<li Class="CompProperties_Forbiddable"/>
+			<!-- 动力组件 -->
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1000</basePowerConsumption>
+			</li>
+			<!-- 可开关组件 -->
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<!-- 构建相关属性 -->
+		<building>
+			<!-- 关联的武器定义 -->
+			<turretGunDef>RC_HEL_Turret</turretGunDef>
+			<!-- 发射间隔时间 -->
+			<turretBurstCooldownTime>0.1</turretBurstCooldownTime>
+			<turretBurstWarmupTime>0.1</turretBurstWarmupTime>
+			<turretTopDrawSize>2.8</turretTopDrawSize>
+		</building>
+		<!-- 研究先决条件 -->
+		<researchPrerequisites>
+			<li>HeavyTurrets</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<!-- 定义名 -->
+		<defName>RC_HEL_Turret</defName>
+		<!-- 显示标签 -->
+		<label>RC_HEL_Turret</label>
+		<!-- 描述信息 -->
+		<description>RC_HEL_Turret.</description>
+		<!-- 图形数据 -->
+		<graphicData>
+			<!-- 纹理路径 -->
+			<texPath>Things/Building/RC_Turretbase/RC_HEL_Turret</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<!-- 基础统计数据 -->
+		<statBases>
+			<AccuracyTouch>1.0</AccuracyTouch>
+			<AccuracyShort>1.0</AccuracyShort>
+			<AccuracyMedium>1.0</AccuracyMedium>
+			<AccuracyLong>1.0</AccuracyLong>
+			<RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>40</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_HEL</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>30</range>
+				<burstShotCount>40</burstShotCount>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<aimingChargeMote>Mote_BeamRepeater_Charge</aimingChargeMote>
+				<aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+			</li>
+		</verbs>
+	</ThingDef>
+
+
+
+
+</Defs>

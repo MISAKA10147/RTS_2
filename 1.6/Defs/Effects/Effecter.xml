@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--——————————————————激光束————————————————————————-->
+	<ThingDef ParentName="MoteBase">
+		<defName>ABN_Mote_GraserBeamBase</defName>
+		<thingClass>MoteDualAttached</thingClass>
+		<!-- 顶层 -->
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<!-- 淡入时间 -->
+			<fadeInTime>0.2</fadeInTime>
+			<!-- 淡出时间 -->
+			<fadeOutTime>0.3</fadeOutTime>
+			<!-- 持续显示时间 -->
+			<solidTime>999999</solidTime>
+			<!-- 维护 -->
+			<needsMaintenance>True</needsMaintenance>
+			<!-- 目标旋转 -->
+			<rotateTowardsTarget>True</rotateTowardsTarget>
+			<!-- 缩放 -->
+			<scaleToConnectTargets>True</scaleToConnectTargets>
+			<!-- 淡出 -->
+			<fadeOutUnmaintained>True</fadeOutUnmaintained>
+		</mote>
+		<!-- 屏幕外绘制 -->
+		<drawOffscreen>true</drawOffscreen>
+		<graphicData>
+			<texPath>Things/Mote/ABNGraserBeam</texPath>
+			<!-- 随时间变化 -->
+			<graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+			<shaderType>MoteBeam</shaderType>
+			<shaderParameters>
+				<_ExtraTexA>/Things/Mote/ABNBeamSecondaryNoise_A</_ExtraTexA>
+				<_ExtraTexB>/Things/Mote/ABNBeamSecondaryNoise_B</_ExtraTexB>
+				<!-- A的滚动速度 -->
+				<_ScrollSpeedA>-2 </_ScrollSpeedA>
+				<!-- B的滚动速度 -->
+				<_ScrollSpeedB>2</_ScrollSpeedB>
+				<!-- 定义强度 -->
+				<_Intensity>0.5</_Intensity>
+			</shaderParameters>
+		</graphicData>
+	</ThingDef>
+
+
+
+	<ThingDef ParentName="MoteBase">
+		<defName>RC_Mote_BeamRepeaterLaser</defName>
+		<thingClass>MoteDualAttached</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.1</fadeInTime>
+			<fadeOutTime>0.1</fadeOutTime>
+			<solidTime>0.1</solidTime>
+			<rotateTowardsTarget>True</rotateTowardsTarget>
+			<scaleToConnectTargets>True</scaleToConnectTargets>
+		</mote>
+		<drawOffscreen>true</drawOffscreen>
+		<graphicData>
+			<texPath>Things/Mote/ABNGraserBeam</texPath>
+			<graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+			<shaderType>MoteBeam</shaderType>
+			<shaderParameters>
+				<_ExtraTexA>/Things/Mote/ABNBeamSecondaryNoise_A</_ExtraTexA>
+				<_ExtraTexB>/Things/Mote/ABNBeamSecondaryNoise_B</_ExtraTexB>
+				<_ScrollSpeedA>-2</_ScrollSpeedA>
+				<_ScrollSpeedB>2</_ScrollSpeedB>
+				<_Intensity>0.2</_Intensity>
+			</shaderParameters>
+		</graphicData>
+	</ThingDef>
+
+
+</Defs>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="LightUnit">
+		<defName>LAU_emp</defName>
+		<label>LAU_emp</label>
+		<description>Light attack unit1.</description>
+		<statBases>
+			<MoveSpeed>4</MoveSpeed>
+			<!-- 移动速度 -->
+		</statBases>
+		<comps>
+			<li Class="RTS.UnitCompProperties">
+				<mass>20</mass>
+				<cost>5</cost>
+			</li>
+			<li Class="RTS.CompProperties_TurretGun">
+				<!-- 添加炮塔枪组件 -->
+				<turretDef>LAU_emp_Turret</turretDef>
+				<littleCooldown>20</littleCooldown>
+				<!-- 连射冷却 -->
+				<extraShootCount>0</extraShootCount>
+				<!-- 额外射击次数 -->
+				<warmupTime>100</warmupTime>
+				<!-- 冷却时间 -->
+				<angleOffset>-90</angleOffset>
+				<autoAttack>false</autoAttack>
+				<renderNodeProperties>
+					<li>
+						<nodeClass>RTS.PawnRenderNode_TurretGun</nodeClass>
+						<workerClass>RTS.PawnRenderNodeWorker_TurretGun</workerClass>
+						<overrideMeshSize>(1.5, 1.5)</overrideMeshSize>
+						<parentTagDef>Body</parentTagDef>
+						<baseLayer>20</baseLayer>
+						<pawnType>Any</pawnType>
+						<drawData>
+							<dataWest>
+								<rotationOffset>180</rotationOffset>
+							</dataWest>
+						</drawData>
+					</li>
+				</renderNodeProperties>
+			</li>
+		</comps>
+		<killedLeavingsPlayerHostile>
+			<Steel>50</Steel>
+		</killedLeavingsPlayerHostile>
+	</ThingDef>
+
+
+	<PawnKindDef ParentName="LightUnitKind">
+		<defName>LAU_emp</defName>
+		<label>LAU_emp</label>
+		<labelPlural>LAU_emp</labelPlural>
+		<race>LAU_emp</race>
+		<weaponTags>
+		</weaponTags>
+	</PawnKindDef>
+
+
+
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>LAU_emp_Turret</defName>
+		<label>LAU_emp_Turret</label>
+		<description>LAU_emp_Turret.</description>
+		<tradeability>None</tradeability>
+		<!-- 无法交易 -->
+		<destroyOnDrop>true</destroyOnDrop>
+		<!-- 抛弃时销毁 -->
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/LAU_emp_Turret</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>2.6</Mass>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<!-- 触摸精度为 0.60 -->
+			<AccuracyShort>0.80</AccuracyShort>
+			<!-- 短距离精度为 0.80 -->
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<!-- 中距离精度为 0.90 -->
+			<AccuracyLong>0.85</AccuracyLong>
+			<!-- 长距离精度为 0.85 -->
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<!-- 动作类 -->
+				<defaultProjectile>Bullet_LAU_emp</defaultProjectile>
+				<!-- 弹药类型-->
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<range>56</range>
+				<!-- 射程 -->
+				<soundCast>Shot_ChargeBlaster</soundCast>
+				<!-- 发射时的声音效果 -->
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<!-- 发射尾声声音效果 -->
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<!-- 枪口闪光-->
+				<defaultCooldownTime>3</defaultCooldownTime>
+				<!-- 冷却时间 -->
+				<linkedBodyPartsGroup>BulbTurret</linkedBodyPartsGroup>
+				<!-- 关联的身体部位组 BulbTurret -->
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<!-- 确保关联的身体部位组始终可用 -->
+				<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+				<!-- 每次连射间隔 -->
+				<!-- 每次连发数量 -->
+				<burstShotCount>1</burstShotCount>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<stopBurstWithoutLos>false</stopBurstWithoutLos>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+			</li>
+		</verbs>
+	</ThingDef>
+
+
+
+
+
+
+
+</Defs>

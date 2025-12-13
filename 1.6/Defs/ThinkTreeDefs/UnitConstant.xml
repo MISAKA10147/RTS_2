@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThinkTreeDef>
+		<!-- 定义 ThinkTree 的唯一标识符 -->
+		<defName>UnitConstant</defName>
+		<!-- 定义思考逻辑的根节点，使用优先级结构 -->
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+
+				<!-- 处理未生成（Despawned）状态的节点 -->
+				<!-- 如果机械体未在游戏中场地上，则执行 Despawned 子树定义的行为 -->
+				<li Class="ThinkNode_Subtree">
+					<treeDef>Despawned</treeDef>
+				</li>
+
+				<!-- 处理属于玩家的机械体 -->
+				<li Class="ThinkNode_ConditionalPlayerMech">
+					<subNodes>
+
+
+
+					</subNodes>
+				</li>
+
+				<!-- 处理不属于玩家的机械体 (invert="true" 表示条件取反) -->
+				<li Class="ThinkNode_ConditionalPlayerMech">
+					<invert>true</invert>
+					<subNodes>
+						<!-- 检查现在是否可以执行 ThinkTree 中定义的持续性工作 -->
+						<li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+							<subNodes>
+								<!-- 检查机械体是否拥有 'SmokepopMech' 能力 -->
+								<li Class="ThinkNode_ConditionalHasAbility">
+									<ability>SmokepopMech</ability>
+									<subNodes>
+										<!-- 检查是否在最近 600 ticks (10秒) 内被射击过 -->
+										<li Class="ThinkNode_ConditionalShotRecently">
+											<thresholdTicks>600</thresholdTicks>
+											<subNodes>
+												<!-- 检查累计受到的伤害是否超过最大生命值的 25% -->
+												<li Class="ThinkNode_ConditionalTotalDamage">
+													<thresholdPercent>0.25</thresholdPercent>
+													<subNodes>
+														<!-- 如果满足以上所有条件，则对自己施放 'SmokepopMech' 能力 -->
+														<li Class="JobGiver_AICastAbilityOnSelf">
+															<ability>SmokepopMech</ability>
+														</li>
+													</subNodes>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+
+
+								<!-- 检查机械体是否拥有 'LongjumpMech' 能力 -->
+								<li Class="ThinkNode_ConditionalHasAbility">
+									<ability>LongjumpMech</ability>
+									<subNodes>
+										<!-- 检查自身是否在最近 120 ticks (2秒) 内受到过伤害 -->
+										<li Class="ThinkNode_HarmedRecently">
+											<thresholdTicks>120</thresholdTicks>
+											<subNodes>
+												<!-- 如果复活后立即受到攻击，则使用 'LongjumpMech' 能力跳离敌人 -->
+												<li Class="JobGiver_AIJumpEscapeEnemies">
+													<ability>LongjumpMech</ability>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+
+								<!-- 检查是否有目标（通常指需要释放的其他机械体） -->
+								<li Class="ThinkNode_ConditionalHasTarget">
+									<subNodes>
+										<!-- 释放目标机械体 -->
+										<li Class="JobGiver_AIReleaseMechs" />
+									</subNodes>
+								</li>
+
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+
+
+
+
+
+</Defs>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--————————————————————————————电磁臼炮弹——————————————————————-->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_Shell_Railgun</defName>
+		<label>Shell_Railgun</label>
+		<graphicData>
+			<texPath>Things/Projectile/ShellHighExplosive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<!-- 半透明后处理光照着色器 -->
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<!-- 事物类为爆炸弹药 -->
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<!-- 损伤类型定义 -->
+			<damageAmountBase>100</damageAmountBase>
+			<!-- 伤害值 -->
+			<speed>200</speed>
+			<!-- 弹速 -->
+			<explosionRadius>1.5</explosionRadius>
+			<!-- 爆炸半径 -->
+			<flyOverhead>false</flyOverhead>
+			<!-- 允许飞过头顶 -->
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<!-- 击中厚屋顶的声音效果 -->
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<!-- 爆炸声音效果 -->
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<!-- 预击中声音效果 -->
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<!-- 环境声音效果 -->
+			<preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
+			<!-- 生成爆裂标记 -->
+		</projectile>
+	</ThingDef>
+
+
+
+	<!--————————————————————————————穿甲弹——————————————————-->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_MAU_AP</defName>
+		<label>Bullet_MAU_AP</label>
+		<graphicData>
+			<texPath>Things/Projectile/ShellHighExplosive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<speed>200</speed>
+			<damageAmountBase>100</damageAmountBase>
+			<!-- 基础护甲穿透力 -->
+			<armorPenetrationBase>5</armorPenetrationBase>
+			<!-- 爆炸半径 -->
+			<explosionRadius>0.8</explosionRadius>
+			<!-- 是否飞越头顶 -->
+			<flyOverhead>true</flyOverhead>
+			<!-- 击中厚屋顶的声音效果 -->
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<!-- 爆炸声音效果 -->
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<!-- 碰撞前声音效果 -->
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<!-- 环境音效 -->
+			<soundAmbient>ATProjectile</soundAmbient>
+			<!-- 爆炸痕迹 -->
+			<preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
+			<beamMoteDef>RC_Mote_BeamRepeaterLaser</beamMoteDef>
+		</projectile>
+	</ThingDef>
+
+
+
+
+	<!--————————————————————————————小单位单格emp——————————————————-->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_LAU_emp</defName>
+		<label>Bullet_LAU_emp</label>
+		<graphicData>
+			<texPath>Things/Projectile/ShellEMP</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>EMP</damageDef>
+			<!-- damage amount is the damage def default -->
+			<speed>41</speed>
+			<explosionRadius>1.2</explosionRadius>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>Explosion_EMP</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+
+
+
+	<!--————————————————————————————连射光束——————————————————-->
+	  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_HEL</defName>
+    <label>HEL</label>
+    <thingClass>Beam</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BeamBypassShields</damageDef>
+      <damageAmountBase>6</damageAmountBase>
+      <beamMoteDef>RC_Mote_BeamRepeaterLaser</beamMoteDef>
+      <beamStartOffset>0.6</beamStartOffset>
+      <armorPenetrationBase>0.9</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</Defs>

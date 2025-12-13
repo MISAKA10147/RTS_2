@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Building_MPCU</defName>
+		<label>MPCU</label>
+		<description>Small mobile production and construction unit.</description>
+		<thingClass>Building_PassengerShuttle</thingClass>
+		<preventDroppingThingsOn>true</preventDroppingThingsOn>
+		<altitudeLayer>Building</altitudeLayer>
+		<pathCost>50</pathCost>
+		<!-- 移动成本 -->
+		<blockWind>true</blockWind>
+		<passability>PassThroughOnly</passability>
+		<!-- 可通过性 -->
+		<fillPercent>0.9</fillPercent>
+		<!-- 占据百分比 -->
+		<size>(6,8)</size>
+		<drawHighlight>true</drawHighlight>
+		<!-- 是否绘制高亮 -->
+		<highlightColor>(0.56, 0.62, 0.9)</highlightColor>
+		<!-- 高亮颜色 -->
+		<inspectorTabs>
+			<li>RTS.ITab_HiveSystem</li>
+		</inspectorTabs>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<!-- 图形类 -->
+			<texPath>Things/Building/MPCU/MPCU_building/MPCU</texPath>
+			<!-- 贴图路径 -->
+			<shaderType>CutoutComplex</shaderType>
+			<!-- 着色器类型 -->
+			<drawSize>(9.6,12)</drawSize>
+			<drawOffset>(0, 0, 1)</drawOffset>
+			<!-- 绘制尺寸 -->
+			<shadowData>
+				<volume>(5, 0.5, 9)</volume>
+				<!-- 影子体积 -->
+				<offset>(-1, 0, -1)</offset>
+				<!-- 影子偏移 -->
+			</shadowData>
+		</graphicData>
+
+		<!-- UI图标 -->
+		<uiIconPath>Things/Building/MPCU/MPCU_UI</uiIconPath>
+		<!-- UI图标路径 -->
+		<uiIconScale>1</uiIconScale>
+		<!-- UI图标缩放 -->
+
+		<!-- 基础统计 -->
+		<statBases>
+			<MaxHitPoints>5000</MaxHitPoints>
+			<!-- 最大生命值 -->
+			<Flammability>0</Flammability>
+			<!-- 易燃性 -->
+			<WorkToBuild>900000</WorkToBuild>
+			<!-- 建造所需工作量 -->
+			<Mass>2000</Mass>
+			<!-- 质量 -->
+			<Comfort>0.9</Comfort>
+			<!-- 舒适度 -->
+		</statBases>
+
+		<!-- 其他属性 -->
+		<tickerType>Normal</tickerType>
+		<!-- 计时器类型 -->
+		<designationCategory>Odyssey</designationCategory>
+		<!-- 设计分类 -->
+		<!--<constructionSkillPrerequisite>6</constructionSkillPrerequisite>-->
+		<!-- 建造技能要求 -->
+		<!--<costList>-->
+		<!--</costList>-->
+		<canOverlapZones>true</canOverlapZones>
+		<!-- 是否可以覆盖区域 -->
+		<killedLeavings>
+			<Steel>1000</Steel>
+			<!-- 死亡后留下的钢铁数量 -->
+			<ChunkSlagSteel>12</ChunkSlagSteel>
+			<!-- 死亡后留下的钢铁残渣数量 -->
+		</killedLeavings>
+		<rotatable>true</rotatable>
+		<!-- 是否可旋转 -->
+		<hasInteractionCell>true</hasInteractionCell>
+		<!-- 是否有交互单元格 -->
+		<interactionCellOffset>(3, 0, 0)</interactionCellOffset>
+		<!-- 交互单元格偏移 -->
+		<defaultPlacingRot>East</defaultPlacingRot>
+		<!-- 默认放置方向 -->
+		<selectable>true</selectable>
+		<!-- 是否可选中 -->
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<!-- 所需地形适应性 -->
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<!-- 默认撞击声音 -->
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<!-- 是否阻止天降者降落 -->
+		<drawerType>RealtimeOnly</drawerType>
+		<!-- 绘图类型 -->
+		<repairEffect>ConstructMetal</repairEffect>
+		<!-- 修复效果 -->
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<!-- 强制调试生成 -->
+
+		<!-- 构建相关属性 -->
+		<building>
+			<claimable>false</claimable>
+			<!-- 是否可声称 -->
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+			<!-- 摧毁声音 -->
+			<paintable>false</paintable>
+			<!-- 是否可涂鸦 -->
+			<isInert>true</isInert>
+			<!-- 是否惰性 -->
+			<forcedCostLeavings>
+				<li MayRequire="Ludeon.RimWorld.Odyssey">ShuttleEngine</li>
+				<!-- 强制消耗的成本 -->
+			</forcedCostLeavings>
+		</building>
+
+		<!-- 检查器选项卡 -->
+		<inspectorTabs>
+			<li>ITab_ContentsTransporter</li>
+			<!-- 内容运输检查器选项卡 -->
+		</inspectorTabs>
+
+		<!-- 组件 -->
+		<comps>
+			<li Class="CompProperties_Battery">
+				<!-- 电池组件属性 -->
+				<storedEnergyMax>300000</storedEnergyMax>
+				<!-- 最大存储能量 -->
+				<efficiency>1</efficiency>
+				<!-- 效率 -->
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<!-- 雨中短路 -->
+				<transmitsPower>true</transmitsPower>
+				<!-- 传输电力 -->
+			</li>
+			<li Class="RTS.CompPropertiesHiveSystem">
+				<costLimit>500</costLimit>
+				<!-- 人口 -->
+				<massLimit>2000</massLimit>
+				<!-- 质量库存 -->
+				<massPerCount>1</massPerCount>
+				<!-- 钢铁对应的Mass -->
+				<healInterval>200</healInterval>
+				<!-- 维修间隔tick -->
+				<healMassPerUnit>4</healMassPerUnit>
+				<!-- 每个单元消耗的质量 -->
+				<healPointPerMass>10</healPointPerMass>
+				<!-- 每个质量对应的点数 -->
+				<massToRestorePart>10</massToRestorePart>
+				<!-- 肢体再生 -->
+				<recyclePercent>0.5</recyclePercent>
+				<!-- 销毁返还资源 -->
+				<units>
+					<li>
+						<kind>Bomb_Drone</kind>
+						<spawnTime>20</spawnTime>
+						<type>RTS_SpecialUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+					</li>
+					<li>
+						<kind>LAU_AT</kind>
+						<spawnTime>100</spawnTime>
+						<type>RTS_LightUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+						<traits>
+							<li>RTS_Vacuum</li>
+						</traits>
+					</li>
+					<li>
+						<kind>LAU_MG</kind>
+						<spawnTime>200</spawnTime>
+						<type>RTS_LightUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+						<traits>
+							<li>RTS_Vacuum</li>
+						</traits>
+					</li>
+					<li>
+						<kind>LAU_RP</kind>
+						<spawnTime>600</spawnTime>
+						<type>RTS_LightUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+						<traits>
+							<li>RTS_Vacuum</li>
+						</traits>
+					</li>
+					<li>
+						<kind>LAU_emp</kind>
+						<spawnTime>400</spawnTime>
+						<type>RTS_LightUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+					</li>
+					<li>
+						<kind>MAU_RP</kind>
+						<spawnTime>400</spawnTime>
+						<type>RTS_MediumUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+					</li>
+					<li>
+						<kind>MAU_AP</kind>
+						<spawnTime>400</spawnTime>
+						<type>RTS_MediumUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+					</li>
+					<li>
+						<kind>MAU_HEL</kind>
+						<spawnTime>400</spawnTime>
+						<type>RTS_MediumUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+					</li>
+				</units>
+			</li>
+			<li Class="CompProperties_Shuttle">
+				<shipDef>Ship_MPCU</shipDef>
+				<!-- 相关飞船定义 -->
+			</li>
+			<li Class="CompProperties_Launchable">
+				<fuelPerTile>5</fuelPerTile>
+				<!-- 每个方格消耗燃料 -->
+				<minFuelCost>60</minFuelCost>
+				<!-- 最小燃料消耗 -->
+				<skyfallerLeaving>MPCU_Leaving</skyfallerLeaving>
+				<!-- 离开时的天降者 -->
+				<worldObjectDef>MPCU_shipObject</worldObjectDef>
+				<!-- 世界对象定义 -->
+				<cooldownTicks>60000</cooldownTicks>
+				<!-- 冷却时间（刻数） -->
+				<fixedLaunchDistanceMax>81</fixedLaunchDistanceMax>
+				<!-- 固定最大发射距离 -->
+				<cooldownEndedMessage>{0} is ready to launch again.</cooldownEndedMessage>
+				<!-- 冷却结束消息 -->
+			</li>
+			<li Class="CompProperties_Transporter">
+				<massCapacity>4000</massCapacity>
+				<!-- 质量容量 -->
+				<max1PerGroup>true</max1PerGroup>
+				<!-- 每组最多一个 -->
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<!-- 开始后是否能更改分配的事物 -->
+				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+				<!-- 载入Pawn的声音 -->
+				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+				<!-- Pawn离开的声音 -->
+				<showMassInInspectString>true</showMassInInspectString>
+				<!-- 在检查字符串中显示质量 -->
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>1000</fuelCapacity>
+				<!-- 燃料容量 -->
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<!-- 目标燃料水平是否可配置 -->
+				<initialConfigurableTargetFuelLevel>1000</initialConfigurableTargetFuelLevel>
+				<!-- 初始目标燃料水平 -->
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+						<!-- 燃料过滤器中的事物定义 -->
+					</thingDefs>
+				</fuelFilter>
+				<fuelLabel>Chemfuel</fuelLabel>
+				<!-- 燃料标签 -->
+				<fuelGizmoLabel>Chemfuel</fuelGizmoLabel>
+				<!-- 燃料工具栏标签 -->
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<!-- 仅在使用时消耗燃料 -->
+				<autoRefuelPercent>1</autoRefuelPercent>
+				<!-- 自动加油百分比 -->
+				<showFuelGizmo>true</showFuelGizmo>
+				<!-- 显示燃料工具栏 -->
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<!-- 绘制无燃料叠加层 -->
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<!-- 显示允许自动加油切换 -->
+				<canEjectFuel>true</canEjectFuel>
+				<!-- 是否能弹出燃料 -->
+			</li>
+			<li Class="CompProperties_AmbientSound">
+				<sound>ShuttleIdle_Ambience</sound>
+				<!-- 环境声音 -->
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+			<!-- 不在屋顶下方放置 -->
+		</placeWorkers>
+	</ThingDef>
+
+	<!-- 运输飞船定义 -->
+	<TransportShipDef>
+		<defName>Ship_MPCU</defName>
+		<!-- 唯一标识符 -->
+		<label>MPCU</label>
+		<!-- 显示名称 -->
+		<shipThing>Building_MPCU</shipThing>
+		<!-- 关联的事物 -->
+		<arrivingSkyfaller>MPCU_Incoming</arrivingSkyfaller>
+		<!-- 到达时的天降者 -->
+		<leavingSkyfaller>MPCU_Leaving</leavingSkyfaller>
+		<!-- 离开时的天降者 -->
+		<worldObject>MPCU_shipObject</worldObject>
+		<!-- 世界对象 -->
+		<playerShuttle>true</playerShuttle>
+		<!-- 是否为玩家穿梭机 -->
+	</TransportShipDef>
+
+
+
+</Defs>

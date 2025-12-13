@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase" Name="RC_Turretbase" Abstract="True">
+		<!-- 指定建筑类为 Building_TurretGun -->
+		<thingClass>Building_TurretGun</thingClass>
+		<!-- 使用地图网格和实时绘制方式 -->
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<!-- 是否绘制高亮 -->
+		<drawHighlight>true</drawHighlight>
+		<!-- 仅对敌方单位绘制高亮 -->
+		<drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+		<!-- 图形数据，包括纹理路径、绘制大小、偏移等 -->
+		<graphicData>
+			<!-- 纹理路径 -->
+			<texPath>Things/Building/RC_Turretbase/RC_Turretbase</texPath>
+			<!-- 图形类为 Graphic_Single -->
+			<graphicClass>Graphic_Single</graphicClass>
+			<!-- 绘制大小 -->
+			<drawSize>(2.2, 2.2)</drawSize>
+			<!-- 绘制偏移 -->
+			<drawOffset>(0,0,0)</drawOffset>
+			<!-- 损伤区域 -->
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+			<!-- 阴影数据 -->
+			<shadowData>
+				<volume>(1.5,0.35,1.4)</volume>
+				<offset>(0,0,-0.05)</offset>
+			</shadowData>
+		</graphicData>
+		<!-- 绘制层级 -->
+		<altitudeLayer>Building</altitudeLayer>
+		<!-- 是否可偷窃 -->
+		<stealable>false</stealable>
+		<!-- 是否可旋转 -->
+		<rotatable>false</rotatable>
+		<!-- 建筑尺寸 -->
+		<size>(2,2)</size>
+		<!-- 基础统计数据，如最大生命值、燃烧易燃性、建造工作量等 -->
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+			<WorkToBuild>10000</WorkToBuild>
+			<Mass>100</Mass>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<!-- 计时器类型 -->
+		<tickerType>Normal</tickerType>
+		<!-- 通过能力 -->
+		<passability>PassThroughOnly</passability>
+		<!-- 路径成本 -->
+		<pathCost>50</pathCost>
+		<!-- 填充百分比 -->
+		<fillPercent>0.8</fillPercent>
+		<!-- 是否显示提示工具栏 -->
+		<hasTooltip>true</hasTooltip>
+		<!-- 所需地形承受能力 -->
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<!-- 设计类别 -->
+		<designationCategory>Security</designationCategory>
+		<!-- 构建相关属性 -->
+		<building>
+			<!-- 对AI来说是否具有战斗危险性 -->
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<!-- 顶部绘图大小 -->
+			<turretTopDrawSize>2.7</turretTopDrawSize>
+			<!-- 顶部偏移 -->
+			<turretTopOffset>(0, 0.05)</turretTopOffset>
+		</building>
+		<!-- 放置辅助器 -->
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>PlaceWorker_ShowTurretRadius</li>
+		</placeWorkers>
+		<!-- 快捷键 -->
+		<designationHotKey>Misc3</designationHotKey>
+		<!-- UI图标缩放比例 -->
+		<uiIconScale>0.95</uiIconScale>
+		<!-- 组件列表 -->
+		<comps>
+			<!-- 受到眩晕或电磁脉冲影响的组件 -->
+			<li Class="CompProperties_Stunnable">
+				<affectedDamageDefs>
+					<li>Stun</li>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+		</comps>
+	</ThingDef>
+
+	
+</Defs>

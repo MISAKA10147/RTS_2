@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+    <RTS.UnitTraitDef>
+        <defName>RTS_Vacuum</defName>
+        <label>Vacuum</label>
+        <iconPath>UI/Vacuum</iconPath>
+    </RTS.UnitTraitDef>
+ 
+</Defs>

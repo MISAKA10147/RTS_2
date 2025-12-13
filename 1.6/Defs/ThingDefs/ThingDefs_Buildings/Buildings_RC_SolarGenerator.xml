@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RC_SolarGenerator</defName>
+		<label>速建太阳能板</label>
+		<description>速建太阳能板.</description>
+		<thingClass>Building</thingClass>
+		<!-- 地图网格和实时渲染 -->
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/RC_SolarCollector/RC_SolarCollector</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4.1,4.1)</drawSize>
+			<shadowData>
+				<volume>(3.3,0.75,3.3)</volume>
+				<offset>(0,0,0)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.6,4,2.8)</rect>
+			</damageData>
+		</graphicData>
+		<!-- 是否投射边缘阴影 -->
+		<castEdgeShadows>true</castEdgeShadows>
+		<!-- 是否可以旋转 -->
+		<rotatable>false</rotatable>
+		<!-- 海拔层 -->
+		<altitudeLayer>Building</altitudeLayer>
+		<!-- 通过性 -->
+		<passability>PassThroughOnly</passability>
+		<!-- 移动成本 -->
+		<pathCost>50</pathCost>
+		<!-- 填充百分比 -->
+		<fillPercent>0.4</fillPercent>
+		<!-- 是否可以重叠区域 -->
+		<canOverlapZones>false</canOverlapZones>
+		<!-- 基础统计数据 -->
+		<statBases>
+			<!-- 最大生命值 -->
+			<MaxHitPoints>800</MaxHitPoints>
+			<!-- 构建所需工作量 -->
+			<WorkToBuild>2500</WorkToBuild>
+			<!-- 易燃性 -->
+			<Flammability>0.1</Flammability>
+		</statBases>
+		<!-- 计时器类型 -->
+		<tickerType>Normal</tickerType>
+		<!-- 大小 -->
+		<size>(4,4)</size>
+		<!-- 建筑特定属性 -->
+		<building>
+			<!-- 破坏声音 -->
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<!-- 成本列表 -->
+		<costList>
+			<!-- 所需钢铁数量 -->
+			<Steel>200</Steel>
+		</costList>
+		<!-- 组件列表 -->
+		<comps>
+			<li Class="CompProperties_Battery">
+				<!-- 组件属性_电池 -->
+				<storedEnergyMax>500</storedEnergyMax>
+				<!-- 电池容量 -->
+				<efficiency>0.8</efficiency>
+				<!-- 蓄电效率 -->
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<!-- 雨中短路 -->
+				<transmitsPower>true</transmitsPower>
+				<!-- 电力传输节点 -->
+			</li>
+			<!-- 动力组件 -->
+			<li Class="CompProperties_Power">
+				<!-- 组件类 -->
+				<compClass>CompPowerPlantSolar</compClass>
+				<!-- 基础电力消耗（负数表示产生电力） -->
+				<basePowerConsumption>-2500</basePowerConsumption>
+				<!-- 是否传输电力 -->
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<!-- 可破坏组件 -->
+			<li Class="CompProperties_Breakdownable"/>
+			<!-- 可被打断组件 -->
+			<li Class="CompProperties_Stunnable">
+				<!-- 使用大型电磁脉冲效果器 -->
+				<useLargeEMPEffecter>true</useLargeEMPEffecter>
+				<!-- 每刻钟受到EMP攻击的概率 -->
+				<empChancePerTick>0.03</empChancePerTick>
+				<!-- 影响的伤害类型 -->
+				<affectedDamageDefs>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
+		</comps>
+		<!-- 所需地形适配度 -->
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<!-- 设计分类 -->
+		<designationCategory>Odyssey</designationCategory>
+		<!-- UI排序顺序 -->
+		<uiOrder>2100</uiOrder>
+		<!-- 构造效果 -->
+		<constructEffect>ConstructMetal</constructEffect>
+		<uiIconScale>0.8</uiIconScale>
+	</ThingDef>
+	
+</Defs>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+
+	<!-- ——————瞄准声—————— -->
+	<SoundDef>
+		<defName>AT_Aiming</defName>
+		<!-- 设置为持续播放 -->
+		<sustain>true</sustain>
+		<!-- 设置声音上下文为地图上使用 -->
+		<context>MapOnly</context>
+		<!-- 同时播放的最大实例数 -->
+		<maxSimultaneous>2</maxSimultaneous>
+		<!-- 播放优先级模式，优先最近的声音 -->
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<!-- 游戏速度影响音调 -->
+				<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>ETP/ATaim</clipPath>
+					</li>
+				</grains>
+				<!-- 音高范围 -->
+				<pitchRange>0.99~1.01</pitchRange>
+				<!-- 音量范围 -->
+				<volumeRange>20</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	
+	<!-- ——————电磁武器发射—————— -->
+	<SoundDef>
+		<defName>ATlaunch</defName>
+		<!-- 设置为持续播放 -->
+		<sustain>false</sustain>
+		<!-- 设置声音上下文为地图上使用 -->
+		<context>MapOnly</context>
+		<!-- 同时播放的最大实例数 -->
+		<maxSimultaneous>2</maxSimultaneous>
+		<!-- 播放优先级模式，优先最近的声音 -->
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<!-- 游戏速度影响音调 -->
+				<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>ETP/AT2launch</clipPath>
+					</li>
+				</grains>
+				<!-- 音高范围 -->
+				<pitchRange>0.99~1.01</pitchRange>
+				<!-- 音量范围 -->
+				<volumeRange>50</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+
+	<!-- ——————子弹掠过—————— -->
+	<SoundDef>
+		<defName>ATProjectile</defName>
+		<!-- 设置为持续播放 -->
+		<sustain>true</sustain>
+		<!-- 设置声音上下文为地图上使用 -->
+		<context>MapOnly</context>
+		<!-- 同时播放的最大实例数 -->
+		<maxSimultaneous>2</maxSimultaneous>
+		<!-- 播放优先级模式，优先最近的声音 -->
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<!-- 游戏速度影响音调 -->
+				<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>ETP/ATProjectile</clipPath>
+					</li>
+				</grains>
+				<!-- 音高范围 -->
+				<pitchRange>0.99~1.01</pitchRange>
+				<!-- 音量范围 -->
+				<volumeRange>30</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+	<!-- ——————激光—————— -->
+	<SoundDef>
+		<defName>ETPlaser</defName>
+		<!-- 设置为持续播放 -->
+		<sustain>true</sustain>
+		<!-- 设置声音上下文为地图上使用 -->
+		<context>MapOnly</context>
+		<maxVoices>1</maxVoices>
+		<!-- 播放优先级模式，优先最近的声音 -->
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<!-- 游戏速度影响音调 -->
+				<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>ETP/ETPlaser</clipPath>
+					</li>
+				</grains>
+				<!-- 音高范围 -->
+				<pitchRange>0.99~1.01</pitchRange>
+				<!-- 音量范围 -->
+				<volumeRange>40</volumeRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

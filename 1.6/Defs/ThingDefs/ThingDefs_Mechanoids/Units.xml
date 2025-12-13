@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+	<ThingDef ParentName="BasePawn" Name="BaseUnit" Abstract="True">
+
+		<!-- 默认撞击声音 -->
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+
+		<statBases>
+			<!-- 市场价值 -->
+			<MarketValue>2500</MarketValue>
+			<!-- 心灵敏感度 -->
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<!-- 毒素抗性 -->
+			<ToxicResistance>1</ToxicResistance>
+			<!--可燃性 -->
+			<Flammability>0</Flammability>
+			<!-- 舒适温度下限 -->
+			<ComfyTemperatureMin>-150</ComfyTemperatureMin>
+			<!-- 舒适温度上限 -->
+			<ComfyTemperatureMax>1000</ComfyTemperatureMax>
+			<!-- 肉量 -->
+			<MeatAmount>0</MeatAmount>
+			<!-- 热能护甲 -->
+			<ArmorRating_Heat>2.00</ArmorRating_Heat>
+			<!-- 带宽成本 -->
+			<BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">0</BandwidthCost>
+			<!-- 控制所需时间 -->
+			<ControlTakingTime MayRequire="Ludeon.RimWorld.Biotech">12</ControlTakingTime>
+			<!-- 有毒环境抗性 -->
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<!-- 每点生命值损失能量 -->
+			<MechEnergyLossPerHP MayRequire="Ludeon.RimWorld.Biotech">0.1</MechEnergyLossPerHP>
+			<!-- 每次充电产生的废料包 -->
+			<WastepacksPerRecharge MayRequire="Ludeon.RimWorld.Biotech">0</WastepacksPerRecharge>
+			<!-- 全局工作速度 -->
+			<WorkSpeedGlobal MayRequire="Ludeon.RimWorld.Biotech">1</WorkSpeedGlobal>
+		</statBases>
+
+		<!-- 是否接收信号（指令） -->
+		<receivesSignals>true</receivesSignals>
+
+		<!-- 交易能力 -->
+		<tradeability>None</tradeability>
+
+		<race>
+			<!-- 血肉类型 -->
+			<fleshType>Mechanoid</fleshType>
+			<!-- 是否需要休息 -->
+			<needsRest>false</needsRest>
+			<!-- 是否有性别 -->
+			<hasGenders>false</hasGenders>
+			<!-- 食物类型 -->
+			<foodType>None</foodType>
+			<!-- 预期寿命 -->
+			<lifeExpectancy>2500</lifeExpectancy>
+			<!-- 血液定义 -->
+			<bloodDef>Filth_MachineBits</bloodDef>
+			<!-- 名称生成器 -->
+			<nameGenerator MayRequire="Ludeon.RimWorld.Biotech">NamerMech</nameGenerator>
+			<!-- 叫声间隔范围 -->
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<!-- 对友方的叫声间隔倍数因子 -->
+			<soundCallIntervalFriendlyFactor>2</soundCallIntervalFriendlyFactor>
+			<!-- 思考树 -->
+			<thinkTreeConstant MayRequire="Ludeon.RimWorld.Biotech">UnitConstant</thinkTreeConstant>
+			<!-- 是否能在真空中飞行-->
+			<canFlyInVacuum>true</canFlyInVacuum>
+		</race>
+		<comps>
+			<!-- 机械可修复组件 -->
+			<!--<li MayRequire="Ludeon.RimWorld.Biotech" Class="CompProperties_MechRepairable" /> -->
+		</comps>
+	</ThingDef>
+
+	<PawnKindDef Name="BaseUnitKind" Abstract="True">
+		<!-- 默认派系 -->
+		<defaultFactionDef>Mechanoid</defaultFactionDef>
+		<!-- AI是否避免掩体 -->
+		<aiAvoidCover>true</aiAvoidCover>
+		<!-- 掉落时是否销毁装备 -->
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<!-- 是否可以被扒光 -->
+		<canStrip>false</canStrip>
+		<!-- 最小生成年龄为200 -->
+		<minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">1</minGenerationAge>
+		<!-- 是否强制普通装备品质 -->
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+	</PawnKindDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<ThingDef Name="DroneUnit" ParentName="BaseUnit" Abstract="True">
+		<statBases>
+			<!-- 市场价值 -->
+			<MarketValue>50</MarketValue>
+			<MoveSpeed>10</MoveSpeed>
+			<!--钝器护甲 -->
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<!-- 利器护甲 -->
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<!-- 1点HP消耗能量 -->
+			<MechEnergyLossPerHP>0</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<body>Unit_Light</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>0.5</baseHealthScale>
+			<!-- 基础生命值比例 -->
+			<hasCorpse>false</hasCorpse>
+			<!-- 无尸体 -->
+			<deathAction>
+				<workerClass>DeathActionWorker_SmallExplosion</workerClass>
+				<!-- 死亡动作类 -->
+			</deathAction>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
+					<!-- 受伤时的声音 -->
+					<soundDeath>Unit_Death</soundDeath>
+					<!-- 死亡时的声音 -->
+					<soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
+					<!-- 叫声 -->
+				</li>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>100</minAge>
+					<!-- 最小年龄为 100 -->
+					<soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
+					<!-- 受伤时的声音 -->
+					<soundDeath>Unit_Death</soundDeath>
+					<!-- 死亡时的声音 -->
+					<soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
+					<!-- 叫声 -->
+				</li>
+			</lifeStageAges>
+			<!-- 智能等级 -->
+			<intelligence>ToolUser</intelligence>
+			<!-- 思考树 -->
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<!-- 基础体型 -->
+			<baseBodySize>0.2</baseBodySize>
+			<!-- 重量分类 -->
+			<mechWeightClass>Light</mechWeightClass>
+		</race>
+		<!-- 屠宰机械体 -->
+		<butcherProducts>
+			<Steel>1</Steel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<!-- 攻击力 -->
+				<power>6</power>
+				<!-- 攻击间隔 -->
+				<cooldownTime>3</cooldownTime>
+				<!-- 关联身体部件 -->
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<!-- 受损攻击也进行 -->
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<PawnKindDef Name="DroneUnitKind" ParentName="BaseUnitKind" Abstract="True">
+		<!-- 生成武器预算 -->
+		<weaponMoney>9999~9999</weaponMoney>
+		<!-- 战斗力。 -->
+		<combatPower>5</combatPower>
+		<!-- 武器标签 -->
+		<weaponTags></weaponTags>
+		<!-- 安装Hediff概率 -->
+		<techHediffsChance>1</techHediffsChance>
+		<!-- 预算 -->
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+		<!-- 控制组缩放比例 -->
+		<controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+
+		<allowInMechClusters>false</allowInMechClusters>
+		<!-- 不允许加入机甲集群 -->
+		<forceNoDeathNotification>true</forceNoDeathNotification>
+		<!-- 强制不发送死亡通知 -->
+		<forceDeathOnDowned>true</forceDeathOnDowned>
+		<!-- 被击倒后立即死亡 -->
+		<allowOldAgeInjuries>false</allowOldAgeInjuries>
+		<!-- 不允许因衰老而受伤 -->
+		<lifeStages>
+		</lifeStages>
+	</PawnKindDef>
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+	
+	
+	
+
+	<ThingDef Name="LightUnit" ParentName="BaseUnit" Abstract="True">
+		<statBases>
+			<!-- 市场价值 -->
+			<MarketValue>5500</MarketValue>
+			<MoveSpeed>6</MoveSpeed>
+			<!--钝器护甲 -->
+			<ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+			<!-- 利器护甲 -->
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<!-- 1点HP消耗能量 -->
+			<MechEnergyLossPerHP>0</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<body>Unit_Light</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>1</baseHealthScale>
+			<!-- 基础生命值比例 -->
+			<hasCorpse>false</hasCorpse>
+			<!-- 无尸体 -->
+			<deathAction>
+				<workerClass>DeathActionWorker_SmallExplosion</workerClass>
+				<!-- 死亡动作类 -->
+			</deathAction>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
+					<!-- 受伤时的声音 -->
+					<soundDeath>Unit_Death</soundDeath>
+					<!-- 死亡时的声音 -->
+					<soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
+					<!-- 叫声 -->
+				</li>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>100</minAge>
+					<!-- 最小年龄为 100 -->
+					<soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
+					<!-- 受伤时的声音 -->
+					<soundDeath>Unit_Death</soundDeath>
+					<!-- 死亡时的声音 -->
+					<soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
+					<!-- 叫声 -->
+				</li>
+			</lifeStageAges>
+			<!-- 智能等级 -->
+			<intelligence>ToolUser</intelligence>
+			<!-- 思考树 -->
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<!-- 基础体型 -->
+			<baseBodySize>0.7</baseBodySize>
+			<!-- 重量分类 -->
+			<mechWeightClass>Light</mechWeightClass>
+		</race>
+		<!-- 屠宰机械体 -->
+		<butcherProducts>
+			<Steel>10</Steel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<!-- 攻击力 -->
+				<power>6</power>
+				<!-- 攻击间隔 -->
+				<cooldownTime>3</cooldownTime>
+				<!-- 关联身体部件 -->
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<!-- 受损攻击也进行 -->
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<PawnKindDef Name="LightUnitKind" ParentName="BaseUnitKind" Abstract="True">
+		<!-- 生成武器预算 -->
+		<weaponMoney>9999~9999</weaponMoney>
+		<!-- 战斗力。 -->
+		<combatPower>5</combatPower>
+		<!-- 武器标签 -->
+		<weaponTags></weaponTags>
+		<!-- 安装Hediff概率 -->
+		<techHediffsChance>1</techHediffsChance>
+		<!-- 预算 -->
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+		<!-- 控制组缩放比例 -->
+		<controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+		
+		<allowInMechClusters>false</allowInMechClusters>
+		<!-- 不允许加入机甲集群 -->
+		<forceNoDeathNotification>true</forceNoDeathNotification>
+		<!-- 强制不发送死亡通知 -->
+		<forceDeathOnDowned>true</forceDeathOnDowned>
+		<!-- 被击倒后立即死亡 -->
+		<allowOldAgeInjuries>false</allowOldAgeInjuries>
+		<!-- 不允许因衰老而受伤 -->
+		<lifeStages>
+			<!-- 生命周期阶段定义 -->
+			<li>
+				<!-- 第一生命周期阶段 -->
+				<bodyGraphicData>
+					<!-- 身体图形数据 -->
+					<texPath>Things/Pawn/Unit/LAU/LAU</texPath>
+					<!-- 图形纹理路径 -->
+					<maskPath>Things/Pawn/Unit/LAU/Overlays/LAU</maskPath>
+					<!-- 掩膜纹理路径 -->
+					<shaderType>CutoutWithOverlay</shaderType>
+					<!-- 使用带有掩膜的剪切着色器 -->
+					<graphicClass>Graphic_Multi</graphicClass>
+					<!-- 使用多层图形类 -->
+					<drawSize>1.6</drawSize>
+					<!-- 绘制尺寸 -->
+					<shadowData>
+						<!-- 阴影数据 -->
+						<volume>(0.5, 0.8, 0.5)</volume>
+						<!-- 阴影体积 -->
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<!-- 第二生命周期阶段 -->
+				<bodyGraphicData>
+					<!-- 身体图形数据 -->
+					<texPath>Things/Pawn/Unit/LAU/LAU</texPath>
+					<!-- 古老版图形纹理路径 -->
+					<maskPath>Things/Pawn/Unit/LAU/Overlays/LAU</maskPath>
+					<!-- 掩膜纹理路径 -->
+					<shaderType>CutoutWithOverlay</shaderType>
+					<!-- 使用带有掩膜的剪切着色器 -->
+					<graphicClass>Graphic_Multi</graphicClass>
+					<!-- 使用多层图形类 -->
+					<drawSize>1.6</drawSize>
+					<!-- 绘制尺寸 -->
+					<shadowData>
+						<!-- 阴影数据 -->
+						<volume>(0.5, 0.8, 0.5)</volume>
+						<!-- 阴影体积 -->
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+	<ThingDef Name="MediumUnit" ParentName="BaseUnit" Abstract="True">
+		<statBases>
+			<!-- 市场价值 -->
+			<MarketValue>15000</MarketValue>
+			<MoveSpeed>3</MoveSpeed>
+			<!--钝器护甲 -->
+			<ArmorRating_Blunt>1.80</ArmorRating_Blunt>
+			<!-- 利器护甲 -->
+			<ArmorRating_Sharp>1.60</ArmorRating_Sharp>
+			<!-- 1点HP消耗能量 -->
+			<MechEnergyLossPerHP>0</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<body>Unit_Light</body>
+			<baseBodySize>3</baseBodySize>
+			<baseHealthScale>3</baseHealthScale>
+			<!-- 基础生命值比例 -->
+			<hasCorpse>false</hasCorpse>
+			<!-- 无尸体 -->
+			<deathAction>
+				<workerClass>DeathActionWorker_SmallExplosion</workerClass>
+				<!-- 死亡动作类 -->
+			</deathAction>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
+					<!-- 受伤时的声音 -->
+					<soundDeath>Unit_Death</soundDeath>
+					<!-- 死亡时的声音 -->
+					<soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
+					<!-- 叫声 -->
+				</li>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>100</minAge>
+					<!-- 最小年龄为 100 -->
+					<soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
+					<!-- 受伤时的声音 -->
+					<soundDeath>Unit_Death</soundDeath>
+					<!-- 死亡时的声音 -->
+					<soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
+					<!-- 叫声 -->
+				</li>
+			</lifeStageAges>
+			<!-- 智能等级 -->
+			<intelligence>ToolUser</intelligence>
+			<!-- 思考树 -->
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<!-- 基础体型 -->
+			<baseBodySize>4</baseBodySize>
+			<!-- 重量分类 -->
+			<mechWeightClass>Medium</mechWeightClass>
+		</race>
+		<!-- 屠宰机械体 -->
+		<butcherProducts>
+			<Steel>50</Steel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<!-- 攻击力 -->
+				<power>6</power>
+				<!-- 攻击间隔 -->
+				<cooldownTime>3</cooldownTime>
+				<!-- 关联身体部件 -->
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<!-- 受损攻击也进行 -->
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<PawnKindDef Name="MediumUnitKind" ParentName="BaseUnitKind" Abstract="True">
+		<!-- 生成武器预算 -->
+		<weaponMoney>9999~9999</weaponMoney>
+		<!-- 战斗力。 -->
+		<combatPower>5</combatPower>
+		<!-- 武器标签 -->
+		<weaponTags></weaponTags>
+		<!-- 安装Hediff概率 -->
+		<techHediffsChance>1</techHediffsChance>
+		<!-- 预算 -->
+		<techHediffsMoney>9999~9999</techHediffsMoney>
+		<!-- 控制组缩放比例 -->
+		<controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+
+		<allowInMechClusters>false</allowInMechClusters>
+		<!-- 不允许加入机甲集群 -->
+		<forceNoDeathNotification>true</forceNoDeathNotification>
+		<!-- 强制不发送死亡通知 -->
+		<forceDeathOnDowned>true</forceDeathOnDowned>
+		<!-- 被击倒后立即死亡 -->
+		<allowOldAgeInjuries>false</allowOldAgeInjuries>
+		<!-- 不允许因衰老而受伤 -->
+		<lifeStages>
+			<!-- 生命周期阶段定义 -->
+			<li>
+				<!-- 第一生命周期阶段 -->
+				<bodyGraphicData>
+					<!-- 身体图形数据 -->
+					<texPath>Things/Pawn/Unit/MAU/MAU</texPath>
+					<!-- 图形纹理路径 -->
+					<maskPath>Things/Pawn/Unit/MAU/Overlays/MAU</maskPath>
+					<!-- 掩膜纹理路径 -->
+					<shaderType>CutoutWithOverlay</shaderType>
+					<!-- 使用带有掩膜的剪切着色器 -->
+					<graphicClass>Graphic_Multi</graphicClass>
+					<!-- 使用多层图形类 -->
+					<drawSize>4</drawSize>
+					<!-- 绘制尺寸 -->
+					<shadowData>
+						<!-- 阴影数据 -->
+						<volume>(0.5, 0.8, 0.5)</volume>
+						<!-- 阴影体积 -->
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<!-- 第二生命周期阶段 -->
+				<bodyGraphicData>
+					<!-- 身体图形数据 -->
+					<texPath>Things/Pawn/Unit/MAU/MAU</texPath>
+					<!-- 古老版图形纹理路径 -->
+					<maskPath>Things/Pawn/Unit/MAU/Overlays/MAU</maskPath>
+					<!-- 掩膜纹理路径 -->
+					<shaderType>CutoutWithOverlay</shaderType>
+					<!-- 使用带有掩膜的剪切着色器 -->
+					<graphicClass>Graphic_Multi</graphicClass>
+					<!-- 使用多层图形类 -->
+					<drawSize>4</drawSize>
+					<!-- 绘制尺寸 -->
+					<shadowData>
+						<!-- 阴影数据 -->
+						<volume>(0.5, 0.8, 0.5)</volume>
+						<!-- 阴影体积 -->
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+
+
+
+
+</Defs>
