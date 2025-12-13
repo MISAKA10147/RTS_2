@@ -1,0 +1,304 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\workgiver_fillmass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\workgiver_fillmass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\itab_hivesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\itab_hivesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\gizmo_setmasslevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\gizmo_setmasslevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|d:\\game\\steam\\steamapps\\common\\rimworld\\mods\\rts\\source\\rts\\comphivesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\comphivesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\window_hivesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\window_hivesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\dialog_sethivename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\dialog_sethivename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\jobdriver_fill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\jobdriver_fill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\unitcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\unitcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\compturretgun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\compturretgun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\command_specialaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\command_specialaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\command_multipleaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\command_multipleaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\jobdriver_returnhive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\jobdriver_returnhive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\patch_mech.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\patch_mech.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\patchmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\patchmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\pawnrendernode_turretgun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\pawnrendernode_turretgun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\lordjob_hivesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\lordjob_hivesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\rts\\rts_defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071313C5-2DED-4689-BA8E-1828B68BAFD7}|RTS\\RTS.csproj|solutionrelative:rts\\rts_defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ITab_HiveSystem.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\ITab_HiveSystem.cs",
+              "RelativeDocumentMoniker": "RTS\\ITab_HiveSystem.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\ITab_HiveSystem.cs",
+              "RelativeToolTip": "RTS\\ITab_HiveSystem.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T16:19:17.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Gizmo_SetMassLevel.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Gizmo_SetMassLevel.cs",
+              "RelativeDocumentMoniker": "RTS\\Gizmo_SetMassLevel.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Gizmo_SetMassLevel.cs",
+              "RelativeToolTip": "RTS\\Gizmo_SetMassLevel.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAgwGAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T13:07:07.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Window_HiveSystem.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Window_HiveSystem.cs",
+              "RelativeDocumentMoniker": "RTS\\Window_HiveSystem.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Window_HiveSystem.cs",
+              "RelativeToolTip": "RTS\\Window_HiveSystem.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAAwPMAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T09:04:33.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CompHiveSystem.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\CompHiveSystem.cs",
+              "RelativeDocumentMoniker": "RTS\\CompHiveSystem.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\CompHiveSystem.cs",
+              "RelativeToolTip": "RTS\\CompHiveSystem.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T15:09:00.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dialog_SetHiveName.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Dialog_SetHiveName.cs",
+              "RelativeDocumentMoniker": "RTS\\Dialog_SetHiveName.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Dialog_SetHiveName.cs",
+              "RelativeToolTip": "RTS\\Dialog_SetHiveName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T14:50:54.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkGiver_FillMass.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\WorkGiver_FillMass.cs",
+              "RelativeDocumentMoniker": "RTS\\WorkGiver_FillMass.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\WorkGiver_FillMass.cs*",
+              "RelativeToolTip": "RTS\\WorkGiver_FillMass.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswBsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T07:23:58.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JobDriver_Fill.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\JobDriver_Fill.cs",
+              "RelativeDocumentMoniker": "RTS\\JobDriver_Fill.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\JobDriver_Fill.cs",
+              "RelativeToolTip": "RTS\\JobDriver_Fill.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA5wAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T07:32:45.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Command_SpecialAction.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Command_SpecialAction.cs",
+              "RelativeDocumentMoniker": "RTS\\Command_SpecialAction.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Command_SpecialAction.cs",
+              "RelativeToolTip": "RTS\\Command_SpecialAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T15:43:53.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UnitComp.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\UnitComp.cs",
+              "RelativeDocumentMoniker": "RTS\\UnitComp.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\UnitComp.cs",
+              "RelativeToolTip": "RTS\\UnitComp.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T15:39:00.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CompTurretGun.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\CompTurretGun.cs",
+              "RelativeDocumentMoniker": "RTS\\CompTurretGun.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\CompTurretGun.cs",
+              "RelativeToolTip": "RTS\\CompTurretGun.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAYwNoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T08:07:44.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Command_MultipleAction.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Command_MultipleAction.cs",
+              "RelativeDocumentMoniker": "RTS\\Command_MultipleAction.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Command_MultipleAction.cs",
+              "RelativeToolTip": "RTS\\Command_MultipleAction.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T15:31:02.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JobDriver_ReturnHive.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\JobDriver_ReturnHive.cs",
+              "RelativeDocumentMoniker": "RTS\\JobDriver_ReturnHive.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\JobDriver_ReturnHive.cs",
+              "RelativeToolTip": "RTS\\JobDriver_ReturnHive.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T08:23:16.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Patch_Mech.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Patch_Mech.cs",
+              "RelativeDocumentMoniker": "RTS\\Patch_Mech.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\Patch_Mech.cs",
+              "RelativeToolTip": "RTS\\Patch_Mech.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAzwDoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T13:05:25.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PatchMain.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\PatchMain.cs",
+              "RelativeDocumentMoniker": "RTS\\PatchMain.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\PatchMain.cs",
+              "RelativeToolTip": "RTS\\PatchMain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T12:19:06.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PawnRenderNode_TurretGun.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\PawnRenderNode_TurretGun.cs",
+              "RelativeDocumentMoniker": "RTS\\PawnRenderNode_TurretGun.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\PawnRenderNode_TurretGun.cs",
+              "RelativeToolTip": "RTS\\PawnRenderNode_TurretGun.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAkwB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T08:11:07.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LordJob_HiveSystem.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\LordJob_HiveSystem.cs",
+              "RelativeDocumentMoniker": "RTS\\LordJob_HiveSystem.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\LordJob_HiveSystem.cs",
+              "RelativeToolTip": "RTS\\LordJob_HiveSystem.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvwsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T07:12:56.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RTS_DefOf.cs",
+              "DocumentMoniker": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\RTS_DefOf.cs",
+              "RelativeDocumentMoniker": "RTS\\RTS_DefOf.cs",
+              "ToolTip": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\Mods\\RTS\\Source\\RTS\\RTS_DefOf.cs",
+              "RelativeToolTip": "RTS\\RTS_DefOf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T07:27:34.765Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
