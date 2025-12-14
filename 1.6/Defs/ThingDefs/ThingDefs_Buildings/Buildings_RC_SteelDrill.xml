@@ -97,7 +97,7 @@
 		<canOverlapZones>false</canOverlapZones>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<!-- 需要的地形适宜性，中等地形 -->
-		<designationCategory>Odyssey</designationCategory>
+		<designationCategory>Self-assemblyBuilding</designationCategory>
 		<!-- 指定分类，用于建筑规划时分类 -->
 		<uiOrder>2100</uiOrder>
 		<!-- UI顺序，决定在建筑菜单中的排序 -->

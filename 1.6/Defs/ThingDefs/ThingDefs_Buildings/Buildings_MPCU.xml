@@ -64,7 +64,7 @@
 		<!-- 其他属性 -->
 		<tickerType>Normal</tickerType>
 		<!-- 计时器类型 -->
-		<designationCategory>Odyssey</designationCategory>
+		<designationCategory>Self-assemblyBuilding</designationCategory>
 		<!-- 设计分类 -->
 		<!--<constructionSkillPrerequisite>6</constructionSkillPrerequisite>-->
 		<!-- 建造技能要求 -->
@@ -159,12 +159,14 @@
 						<spawnTime>20</spawnTime>
 						<type>RTS_SpecialUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/boom</iconPath>
 					</li>
 					<li>
 						<kind>LUGV_AT</kind>
 						<spawnTime>100</spawnTime>
 						<type>RTS_LightUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/L_UGV_MG</iconPath>
 						<traits>
 							<li>RTS_Vacuum</li>
 						</traits>
@@ -174,6 +176,7 @@
 						<spawnTime>200</spawnTime>
 						<type>RTS_LightUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/L_UGV_MG</iconPath>
 						<traits>
 							<li>RTS_Vacuum</li>
 						</traits>
@@ -183,6 +186,7 @@
 						<spawnTime>600</spawnTime>
 						<type>RTS_LightUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/L_UGV_RP</iconPath>
 						<traits>
 							<li>RTS_Vacuum</li>
 						</traits>
@@ -192,36 +196,42 @@
 						<spawnTime>400</spawnTime>
 						<type>RTS_LightUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/L_UGV_EMP</iconPath>
 					</li>
 					<li>
 						<kind>MUGV_RP</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_MediumUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/M_UGV_RP</iconPath>
 					</li>
 					<li>
 						<kind>MUGV_AP</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_MediumUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/M_UGV_AT</iconPath>
 					</li>
 					<li>
 						<kind>MUGV_HEL</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_MediumUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/M_UGV_HEL</iconPath>
 					</li>
 					<li>
 						<kind>MUGV_FT</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_MediumUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/M_UGV_FT</iconPath>
 					</li>
 					<li>
 						<kind>MCRU</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_SpecialUnits</type>
 						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/MCRU</iconPath>
 					</li>
 				</units>
 			</li>

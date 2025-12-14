@@ -59,7 +59,7 @@
 		<!-- 所需地形承受能力 -->
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<!-- 设计类别 -->
-		<designationCategory>Security</designationCategory>
+		<designationCategory>Self-assemblyBuilding</designationCategory>
 		<!-- 构建相关属性 -->
 		<building>
 			<!-- 对AI来说是否具有战斗危险性 -->

@@ -96,7 +96,7 @@
 		<!-- 所需地形适配度 -->
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<!-- 设计分类 -->
-		<designationCategory>Odyssey</designationCategory>
+		<designationCategory>Self-assemblyBuilding</designationCategory>
 		<!-- UI排序顺序 -->
 		<uiOrder>2100</uiOrder>
 		<!-- 构造效果 -->

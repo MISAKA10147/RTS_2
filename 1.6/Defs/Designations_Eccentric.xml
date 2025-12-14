@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignationCategoryDef>
+    <defName>ABNTech</defName>
+    <label>研究院</label>
+    <order>260</order>
+  </DesignationCategoryDef>
+
+</Defs>
