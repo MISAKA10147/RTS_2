@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--————————————————————————————通用基质——————————————————————-->
+	<ThingDef ParentName="ResourceBase">
+		<defName>GeneralSubstrate</defName>
+		<label>GeneralSubstrate</label>
+		<description>GeneralSubstrate.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/GeneralSubstrate</texPath>
+			<!-- 图形类：支持堆叠计数显示 -->
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<!-- 声音效果配置 -->
+		<soundInteract>Metal_Drop</soundInteract>
+		<!-- 互动时的声音 -->
+		<soundDrop>Metal_Drop</soundDrop>
+		<!-- 丢弃时的声音 -->
+		<useHitPoints>false</useHitPoints>
+		<!-- 不使用耐久度系统 -->
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<!-- 耐久度不影响价格 -->
+
+		<statBases>
+			<MarketValue>1</MarketValue>
+			<!-- 市场价值 -->
+			<Mass>0.01</Mass>
+			<!-- 重量 -->
+			<Beauty>0</Beauty>
+		</statBases>
+		<!-- 通用市场可售性（设为false表示不在普通商人处出售） -->
+		<genericMarketSellable>false</genericMarketSellable>
+		<!-- 交易性（None表示无法交易） -->
+		<tradeability>None</tradeability>
+		<!-- 科技等级 -->
+		<techLevel>Spacer</techLevel>
+
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<!-- 在Archonexus中允许的最大数量 -->
+	</ThingDef>
+
+
+
+
+
+	<!--————————————————————————————离线授权码——————————————————————-->
+	<ThingDef ParentName="ResourceBase">
+		<defName>Offline_Authorization_Code</defName>
+		<label>Offline Authorization Code</label>
+		<description>Offline Authorization Code.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Offline_Authorization_Code</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>5</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<!-- 耐久度不影响价格 -->
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<!-- 最大耐久度 -->
+			<MarketValue>8000</MarketValue>
+			<!-- 市场价值 -->
+			<Mass>0.1</Mass>
+			<!-- 重量 -->
+			<Flammability>0.2</Flammability>
+			<!-- 易燃性 -->
+			<Beauty>0</Beauty>
+			<DeteriorationRate>0</DeteriorationRate>
+			<!-- 老化速率 -->
+		</statBases>
+		<!-- 通用市场可售性（设为false表示不在普通商人处出售） -->
+		<genericMarketSellable>false</genericMarketSellable>
+		<!-- 交易性（None表示无法交易） -->
+		<tradeability>None</tradeability>
+		<!-- 科技等级 -->
+		<techLevel>Spacer</techLevel>
+		<!-- 复杂物品标记 -->
+		<intricate>true</intricate>
+		<!-- Archonexus模式下的允许数量 -->
+		<allowedArchonexusCount>5</allowedArchonexusCount>
+	</ThingDef>
+
+
+
+
+
+
+
+</Defs>
