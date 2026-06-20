@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--——————————————————钻井————————————————————————-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>RC_Drilling</defName>
+		<label>钻井</label>
+		<description>钻井.</description>
+		<designationCategory>Self-assemblyBuilding</designationCategory>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<texPath>Things/Building/SteelDrilling/Drilling</texPath>
+			<drawSize>(4.2, 4.2)</drawSize>
+			<drawOffset>(0,0,0.4)</drawOffset>
+			<shadowData>
+				<volume>(0, 0, 0)</volume>
+				<offset>(0,0,0)</offset>
+			</shadowData>
+		</graphicData>
+		<uiIconScale>1</uiIconScale>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<size>(2, 2)</size>
+		<useHitPoints>false</useHitPoints>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<altitudeLayer>Building</altitudeLayer>
+		<!-- 层级 -->
+		<rotatable>false</rotatable>
+		<!-- 不可旋转 -->
+		<passability>Standable</passability>
+		<!-- 可站立 -->
+		<clearBuildingArea>false</clearBuildingArea>
+		<!-- 建造时是否需要清理区域 -->
+		<costList>
+		</costList>
+		<statBases>
+			<WorkToBuild>15000</WorkToBuild>
+			<!-- 建造所需的工作量 -->
+			<Flammability>0</Flammability>
+			<!-- 易燃性 -->
+			<Beauty>20</Beauty>
+			<!-- 美观度 -->
+			<Mass>10</Mass>
+			<!-- 质量 -->
+		</statBases>
+	</ThingDef>
+
+
+
+	<!--————————————————————钢铁钻机———————————————————————-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>RC_SubstrateDrillingRig</defName>
+		<label>基材钻机</label>
+		<description>基材钻机.</description>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<graphicData>
+			<texPath>Things/Building/SteelDrilling/SubstrateDrillingRig</texPath>
+			<graphicClass>Graphic_Multi_BuildingWorking</graphicClass>
+			<shaderType>BuildingWorking</shaderType>
+			<drawSize>(4.2, 4.2)</drawSize>
+			<drawOffset>(0,4,0.4)</drawOffset>
+			<shadowData>
+				<volume>(1.8, 1, 1.8)</volume>
+				<offset>(0.0, 0.0, -0.4)</offset>
+			</shadowData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<costList>
+		</costList>
+		<building>
+			<!-- 被摧毁时的声音 -->
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<!-- 建筑组件 -->
+		<comps>
+			<!-- 电源组件 -->
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<!-- 基础电力消耗 -->
+				<basePowerConsumption>1000</basePowerConsumption>
+			</li>
+			<!-- 可损坏组件 -->
+			<li Class="CompProperties_Breakdownable"/>
+			<!-- 可开关组件 -->
+			<li Class="CompProperties_Flickable"/>
+			<!-- 生成器组件 -->
+			<li Class="CompProperties_Spawner">
+				<requiresPower>true</requiresPower>
+				<!-- 生成物 -->
+				<thingToSpawn>GeneralSubstrate</thingToSpawn>
+				<!-- 生成数量 -->
+				<spawnCount>200</spawnCount>
+				<!-- 生成间隔范围 -->
+				<spawnIntervalRange>
+					<min>9000</min>
+					<max>9000</max>
+				</spawnIntervalRange>
+				<!-- 是否显示生成剩余时间 -->
+				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+				<!-- 如果拥有则显示消息 -->
+				<showMessageIfOwned>true</showMessageIfOwned>
+			</li>
+			<!-- 爆炸组件 -->
+			<li Class="CompProperties_Explosive">
+				<!-- 爆炸半径 -->
+				<explosiveRadius>8</explosiveRadius>
+				<!-- 爆炸伤害类型 -->
+				<explosiveDamageType>Flame</explosiveDamageType>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<!-- 组件类名，特定于有动力的热量推送 -->
+				<compClass>CompHeatPusherPowered</compClass>
+				<!-- 每秒散发的热量单位 -->
+				<heatPerSecond>52</heatPerSecond>
+			</li>
+		</comps>
+		<!-- 建筑高度层 -->
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MarketValue>10000</MarketValue>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>-10</Beauty>
+			<Mass>35</Mass>
+			<WorkToBuild>8000</WorkToBuild>
+		</statBases>
+		<!-- 生成标记 -->
+		<thingSetMakerTags>
+			<li>RewardStandardCore</li>
+		</thingSetMakerTags>
+		<!-- 建筑大小 -->
+		<size>(2, 2)</size>
+		<!-- 填充百分比 -->
+		<fillPercent>1.0</fillPercent>
+		<!-- 被摧毁时是否留下资源 -->
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<!-- 通过性 -->
+		<passability>Impassable</passability>
+		<!-- 是否可旋转 -->
+		<rotatable>false</rotatable>
+		<!-- 是否可以与区域重叠 -->
+		<canOverlapZones>false</canOverlapZones>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<!-- 需要的地形适宜性，中等地形 -->
+		<designationCategory>Self-assemblyBuilding</designationCategory>
+		<!-- 指定分类，用于建筑规划时分类 -->
+		<uiOrder>2100</uiOrder>
+		<!-- UI顺序，决定在建筑菜单中的排序 -->
+		<constructEffect>ConstructMetal</constructEffect>
+		<!-- 建造效果，定义建造时的视觉效果 -->
+		<placeWorkers>
+			<li>RC.RC_PlaceWorker_OnDrilling</li>
+		</placeWorkers>
+	</ThingDef>
+	
+</Defs>

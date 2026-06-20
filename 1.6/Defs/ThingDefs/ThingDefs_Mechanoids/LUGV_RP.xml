@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="LightUnit">
-		<defName>LUGV_RP</defName>
-		<label>LUGV_RP</label>
+	<ThingDef ParentName="EM_Walking_LightUnit">
+		<defName>EM_LightWalkingUnit_RP</defName>
+		<label>LightWalkingUnit_RP</label>
 		<description>Light attack unit1.</description>
 		<statBases>
 			<MoveSpeed>4</MoveSpeed>
 			<!-- 移动速度 -->
+			<Mass>60</Mass>
 		</statBases>
 		<comps>
 			<li Class="RTS.UnitCompProperties">
@@ -16,7 +17,7 @@
 			</li>
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
-				<turretDef>LUGV_RP_Turret</turretDef>
+				<turretDef>EM_LightWalkingUnit_RP_Turret</turretDef>
 				<littleCooldown>0</littleCooldown>
 				<!-- 连射冷却 -->
 				<extraShootCount>0</extraShootCount>
@@ -29,7 +30,7 @@
 					<li>
 						<nodeClass>RTS.PawnRenderNode_TurretGun</nodeClass>
 						<workerClass>RTS.PawnRenderNodeWorker_TurretGun</workerClass>
-						<overrideMeshSize>(1.5, 1.5)</overrideMeshSize>
+						<overrideMeshSize>(2.5, 2.5)</overrideMeshSize>
 						<parentTagDef>Body</parentTagDef>
 						<baseLayer>20</baseLayer>
 						<pawnType>Any</pawnType>
@@ -48,11 +49,11 @@
 	</ThingDef>
 
 
-	<PawnKindDef ParentName="LightUnitKind">
-		<defName>LUGV_RP</defName>
-		<label>LUGV_RP</label>
-		<labelPlural>LUGV_RP</labelPlural>
-		<race>LUGV_RP</race>
+	<PawnKindDef ParentName="EM_Walking_LightUnitKind">
+		<defName>EM_LightWalkingUnit_RP</defName>
+		<label>LightWalkingUnit_RP</label>
+		<labelPlural>LightWalkingUnit_RP</labelPlural>
+		<race>EM_LightWalkingUnit_RP</race>
 		<weaponTags>
 		</weaponTags>
 	</PawnKindDef>
@@ -61,15 +62,15 @@
 
 
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>LUGV_RP_Turret</defName>
-		<label>LUGV_RP_Turret</label>
-		<description>LUGV_RP_Turret.</description>
+		<defName>EM_LightWalkingUnit_RP_Turret</defName>
+		<label>LightWalkingUnit_RP_Turret</label>
+		<description>LightWalkingUnit_RP_Turret.</description>
 		<tradeability>None</tradeability>
 		<!-- 无法交易 -->
 		<destroyOnDrop>true</destroyOnDrop>
 		<!-- 抛弃时销毁 -->
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/LUGV_RP_Turret</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/EM_LightWalkingUnit_RP_Turret</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>

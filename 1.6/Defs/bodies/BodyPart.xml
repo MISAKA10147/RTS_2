@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
+	<!-- 单位身体组件 -->
 	<!-- 单元底盘 -->
 	<BodyPartDef Name="Electric_Unit">
 		<defName>Electric_Unit</defName>
@@ -91,6 +91,22 @@
 	<BodyPartDef>
 		<defName>U_Mobile_mechanism</defName>
 		<label>移动机构</label>
+		<hitPoints>100</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+	<!-- 双足结构 -->
+	<BodyPartDef>
+		<defName>U_artificial_foot</defName>
+		<label>人工足</label>
 		<hitPoints>100</hitPoints>
 		<frostbiteVulnerability>0</frostbiteVulnerability>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>

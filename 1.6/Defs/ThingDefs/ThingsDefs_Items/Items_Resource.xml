@@ -3,11 +3,11 @@
 
 	<!--————————————————————————————通用基质——————————————————————-->
 	<ThingDef ParentName="ResourceBase">
-		<defName>GeneralSubstrate</defName>
+		<defName>EM_GeneralSubstrate</defName>
 		<label>GeneralSubstrate</label>
 		<description>GeneralSubstrate.</description>
 		<graphicData>
-			<texPath>Things/Item/Resource/GeneralSubstrate</texPath>
+			<texPath>Things/Item/Resource/EM_GeneralSubstrate</texPath>
 			<!-- 图形类：支持堆叠计数显示 -->
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
@@ -45,11 +45,11 @@
 
 	<!--————————————————————————————离线授权码——————————————————————-->
 	<ThingDef ParentName="ResourceBase">
-		<defName>Offline_Authorization_Code</defName>
+		<defName>EM_Offline_Authorization_Code</defName>
 		<label>Offline Authorization Code</label>
 		<description>Offline Authorization Code.</description>
 		<graphicData>
-			<texPath>Things/Item/Resource/Offline_Authorization_Code</texPath>
+			<texPath>Things/Item/Resource/EM_Offline_Authorization_Code</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Metal_Drop</soundInteract>

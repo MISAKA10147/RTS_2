@@ -4,7 +4,7 @@
 
 	<!-- 单位死亡 -->
 	<SoundDef>
-		<defName>Unit_Death</defName>
+		<defName>EM_Unit_Death</defName>
 		<context>MapOnly</context>
 		<maxSimultaneous>5</maxSimultaneous>
 		<subSounds>
@@ -15,13 +15,49 @@
 					</li>
 				</grains>
 				<volumeRange>20</volumeRange>
+				<pitchRange>2.95~3.05</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+	<!-- 单位叫声 -->
+	<SoundDef>
+		<defName>EM_Unit_Call</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>2</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>unit_call</clipPath>
+					</li>
+				</grains>
+				<volumeRange>20</volumeRange>
 				<pitchRange>0.95~1.05</pitchRange>
 				<sustainLoop>False</sustainLoop>
 			</li>
 		</subSounds>
 	</SoundDef>
-	
-	
-	
-	
+
+	<!-- 单位受击 -->
+	<SoundDef>
+		<defName>EM_Unit_Wounded</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>5</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>unit_wounded</clipPath>
+					</li>
+				</grains>
+				<volumeRange>20</volumeRange>
+				<pitchRange>2.95~3.05</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
 </Defs>

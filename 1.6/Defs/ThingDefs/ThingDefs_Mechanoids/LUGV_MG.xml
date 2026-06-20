@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="LightUnit">
-		<defName>LUGV_MG</defName>
+	<ThingDef ParentName="EM_LightUnit">
+		<defName>EM_LUGV_MG</defName>
 		<label>LUGV_MG</label>
 		<description>Light attack unit.</description>
 		<statBases>
-			<MoveSpeed>6</MoveSpeed>
+			<MoveSpeed>8</MoveSpeed>
 			<!-- 移动速度 -->
+			<Mass>40</Mass>
 		</statBases>
 		<race>
 		</race>
@@ -18,7 +19,7 @@
 			</li>
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
-				<turretDef>LUGV_MG_Turret</turretDef>
+				<turretDef>EM_LUGV_MG_Turret</turretDef>
 				<littleCooldown>5</littleCooldown>
 				<!-- 连射冷却 -->
 				<extraShootCount>5</extraShootCount>
@@ -61,11 +62,11 @@
 		</killedLeavingsPlayerHostile>
 	</ThingDef>
 
-	<PawnKindDef ParentName="LightUnitKind">
-		<defName>LUGV_MG</defName>
+	<PawnKindDef ParentName="EM_LightUnitKind">
+		<defName>EM_LUGV_MG</defName>
 		<label>LUGV_MG</label>
 		<labelPlural>LUGV_MG</labelPlural>
-		<race>LUGV_MG</race>
+		<race>EM_LUGV_MG</race>
 		<combatPower>30</combatPower>
 		<weaponTags>
 		</weaponTags>
@@ -74,7 +75,7 @@
 
 
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>LUGV_MG_Turret</defName>
+		<defName>EM_LUGV_MG_Turret</defName>
 		<label>LUGV_MG_Turret</label>
 		<description>LUGV_MG_Turret.</description>
 		<tradeability>None</tradeability>
@@ -82,7 +83,7 @@
 		<destroyOnDrop>true</destroyOnDrop>
 		<!-- 抛弃时销毁 -->
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/LUGV_MG_Turret</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/EM_LUGV_MG_Turret</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -102,7 +103,7 @@
 				<!-- 动作类 -->
 				<defaultProjectile>Bullet_ChargeBlasterHeavy</defaultProjectile>
 				<!-- 弹药类型 -->
-				<range>26</range>
+				<range>30</range>
 				<!-- 射程 -->
 				<soundCast>Shot_ChargeBlaster</soundCast>
 				<!-- 发射时的声音效果 -->

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="MediumUnit">
-		<defName>MUGV_HEL</defName>
+	<ThingDef ParentName="EM_MediumUnit">
+		<defName>EM_MUGV_HEL</defName>
 		<label>MUGV_HEL</label>
 		<description>Medium attack unit1.</description>
 		<statBases>
-			<MoveSpeed>2.5</MoveSpeed>
+			<MoveSpeed>6</MoveSpeed>
 			<!-- 移动速度 -->
+			<ShootingAccuracyPawn>20</ShootingAccuracyPawn>
+			<Mass>200</Mass>
 		</statBases>
 		<comps>
 			<li Class="RTS.UnitCompProperties">
@@ -16,12 +18,12 @@
 			</li>
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
-				<turretDef>MUGV_HEL_Turret</turretDef>
+				<turretDef>EM_MUGV_HEL_Turret</turretDef>
 				<littleCooldown>1</littleCooldown>
 				<!-- 连射冷却 -->
-				<extraShootCount>30</extraShootCount>
+				<extraShootCount>4</extraShootCount>
 				<!-- 额外射击次数 -->
-				<warmupTime>100</warmupTime>
+				<warmupTime>10</warmupTime>
 				<!-- 冷却时间 -->
 				<angleOffset>-90</angleOffset>
 				<autoAttack>false</autoAttack>
@@ -48,11 +50,11 @@
 	</ThingDef>
 
 
-	<PawnKindDef ParentName="MediumUnitKind">
-		<defName>MUGV_HEL</defName>
+	<PawnKindDef ParentName="EM_MediumUnitKind">
+		<defName>EM_MUGV_HEL</defName>
 		<label>MUGV_HEL</label>
 		<labelPlural>MUGV_HEL</labelPlural>
-		<race>MUGV_HEL</race>
+		<race>EM_MUGV_HEL</race>
 		<weaponTags>
 		</weaponTags>
 	</PawnKindDef>
@@ -61,7 +63,7 @@
 
 
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>MUGV_HEL_Turret</defName>
+		<defName>EM_MUGV_HEL_Turret</defName>
 		<label>MUGV_HEL_Turret</label>
 		<description>MUGV_HEL_Turret.</description>
 		<tradeability>None</tradeability>
@@ -69,8 +71,8 @@
 		<destroyOnDrop>true</destroyOnDrop>
 		<!-- 抛弃时销毁 -->
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/MUGV_HEL_Turret</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Item/Equipment/WeaponRanged/EM_MUGV_HEL_Turret/EM_MUGV_HEL_Turret</texPath>
+			<graphicClass>EM.Graphic_Turret_16Dir</graphicClass>
 		</graphicData>
 		<statBases>
 			<Mass>2.6</Mass>
@@ -86,61 +88,17 @@
 		</statBases>
 		<verbs>
 			<li>
-				<verbClass>Verb_ShootBeam</verbClass>
-				<!-- 指示是否具有标准命令，true表示有 -->
+				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<!-- 定义射击前的预热时间 -->
-				<warmupTime>00</warmupTime>
-				<!-- 定义射击的最大范围 -->
-				<range>32</range>
-				<!-- 定义射击的最小范围 -->
-				<minRange>1</minRange>
-				<!-- 定义激光束全宽时的范围 -->
-				<beamFullWidthRange>0</beamFullWidthRange>
-				<!-- 定义每次射击的连发次数 -->
-				<burstShotCount>3</burstShotCount>
-				<!-- 指示是否显示连发射击的统计数据，false表示不显示 -->
-				<showBurstShotStats>false</showBurstShotStats>
-				<!-- 定义激光束的宽度 -->
-				<beamWidth>1</beamWidth>
-				<!-- 定义两次连发之间的时间间隔（以游戏刻为单位） -->
+				<defaultProjectile>EM_Bullet_HEL</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>30</range>
+				<burstShotCount>1</burstShotCount>
 				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
-				<!-- 定义激光束造成的伤害类型 -->
-				<beamDamageDef>Beam</beamDamageDef>
-				<!-- 定义射击尾部的声音 -->
 				<soundCastTail>GunTail_Medium</soundCastTail>
-				<!-- 定义枪口闪光的大小 -->
-				<muzzleFlashScale>15</muzzleFlashScale>
-				<!-- 定义激光束在地面上产生的效果 -->
-				<beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
-				<!-- 定义激光束每刻产生效果的概率 -->
-				<beamFleckChancePerTick>0.8</beamFleckChancePerTick>
-				<!-- 定义激光束最大偏移量 -->
-				<beamMaxDeviation>0.01</beamMaxDeviation>
-				<!-- 定义激光束的弯曲程度 -->
-				<beamCurvature>0</beamCurvature>
-				<!-- 定义激光束的粒子效果 -->
-				<beamMoteDef>ABN_Mote_GraserBeamBase</beamMoteDef>
-				<!-- 定义激光束结束时的效果 -->
-				<beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
-				<!-- 定义激光束引发火灾的概率 -->
-				<beamChanceToStartFire>0.2</beamChanceToStartFire>
-				<!-- 定义激光束附着火焰的概率 -->
-				<beamChanceToAttachFire>0.2</beamChanceToAttachFire>
-				<!-- 定义激光束引发的火灾大小范围 -->
-				<beamFireSizeRange>0.1~0.2</beamFireSizeRange>
-				<!-- 定义激光束线上的效果 -->
-				<beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
-				<!-- 定义激光束起始位置的偏移量 -->
-				<beamStartOffset>0.3</beamStartOffset>
-				<!-- 定义激光束线上效果出现概率的曲线 -->
-				<beamLineFleckChanceCurve>
-					<points>
-						<!-- 定义曲线上的点，(0, 0)表示起始点，(1, 0.75)表示结束点 -->
-						<li>(0, 0)</li>
-						<li>(0, 0.75)</li>
-					</points>
-				</beamLineFleckChanceCurve>
+				<muzzleFlashScale>6</muzzleFlashScale>
+				<aimingChargeMote>Mote_BeamRepeater_Charge</aimingChargeMote>
+				<aimingChargeMoteOffset>1.1</aimingChargeMoteOffset>
 			</li>
 		</verbs>
 	</ThingDef>

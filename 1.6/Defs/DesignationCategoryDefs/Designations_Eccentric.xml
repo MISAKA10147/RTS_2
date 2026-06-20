@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+	<!-- 建筑页 -->
   <DesignationCategoryDef>
-    <defName>Self-assemblyBuilding</defName>
+    <defName>EM_Self-assemblyBuilding</defName>
     <label>自组装建筑</label>
     <order>260</order>
   </DesignationCategoryDef>

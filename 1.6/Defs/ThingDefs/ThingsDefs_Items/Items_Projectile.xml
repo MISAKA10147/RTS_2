@@ -3,7 +3,7 @@
 
 	<!--————————————————————————————电磁臼炮弹——————————————————————-->
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_Shell_Railgun</defName>
+		<defName>EM_Bullet_Shell_Railgun</defName>
 		<label>Shell_Railgun</label>
 		<graphicData>
 			<texPath>Things/Projectile/ShellHighExplosive</texPath>
@@ -41,7 +41,7 @@
 
 	<!--————————————————————————————穿甲弹——————————————————-->
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_MUGV_AP</defName>
+		<defName>EM_Bullet_MUGV_AP</defName>
 		<label>Bullet_MUGV_AP</label>
 		<graphicData>
 			<texPath>Things/Projectile/ShellHighExplosive</texPath>
@@ -51,12 +51,12 @@
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
 			<damageDef>Bomb</damageDef>
-			<speed>200</speed>
-			<damageAmountBase>100</damageAmountBase>
+			<speed>400</speed>
+			<damageAmountBase>60</damageAmountBase>
 			<!-- 基础护甲穿透力 -->
 			<armorPenetrationBase>5</armorPenetrationBase>
 			<!-- 爆炸半径 -->
-			<explosionRadius>0.8</explosionRadius>
+			<explosionRadius>1.4</explosionRadius>
 			<!-- 是否飞越头顶 -->
 			<flyOverhead>true</flyOverhead>
 			<!-- 击中厚屋顶的声音效果 -->
@@ -66,10 +66,10 @@
 			<!-- 碰撞前声音效果 -->
 			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
 			<!-- 环境音效 -->
-			<soundAmbient>ATProjectile</soundAmbient>
+			<soundAmbient>EM_ATProjectile</soundAmbient>
 			<!-- 爆炸痕迹 -->
 			<preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
-			<beamMoteDef>RC_Mote_BeamRepeaterLaser</beamMoteDef>
+			<beamMoteDef>EM_Mote_BeamRepeaterLaser</beamMoteDef>
 		</projectile>
 	</ThingDef>
 
@@ -78,7 +78,7 @@
 
 	<!--————————————————————————————小单位单格emp——————————————————-->
 	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_LUGV_emp</defName>
+		<defName>EM_Bullet_LUGV_emp</defName>
 		<label>Bullet_LUGV_emp</label>
 		<graphicData>
 			<texPath>Things/Projectile/ShellEMP</texPath>
@@ -103,7 +103,7 @@
 
 	<!--————————————————————————————连射光束——————————————————-->
 	  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_HEL</defName>
+    <defName>EM_Bullet_HEL</defName>
     <label>HEL</label>
     <thingClass>Beam</thingClass>
     <graphicData>
@@ -113,7 +113,7 @@
     <projectile>
       <damageDef>BeamBypassShields</damageDef>
       <damageAmountBase>6</damageAmountBase>
-      <beamMoteDef>RC_Mote_BeamRepeaterLaser</beamMoteDef>
+      <beamMoteDef>EM_Mote_BeamRepeaterLaser</beamMoteDef>
       <beamStartOffset>0.6</beamStartOffset>
       <armorPenetrationBase>0.9</armorPenetrationBase>
     </projectile>

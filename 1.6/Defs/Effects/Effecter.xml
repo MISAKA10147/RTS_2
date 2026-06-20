@@ -3,7 +3,7 @@
 
 	<!--——————————————————激光束————————————————————————-->
 	<ThingDef ParentName="MoteBase">
-		<defName>ABN_Mote_GraserBeamBase</defName>
+		<defName>EM_Mote_GraserBeamBase</defName>
 		<thingClass>MoteDualAttached</thingClass>
 		<!-- 顶层 -->
 		<altitudeLayer>MoteOverhead</altitudeLayer>
@@ -26,13 +26,13 @@
 		<!-- 屏幕外绘制 -->
 		<drawOffscreen>true</drawOffscreen>
 		<graphicData>
-			<texPath>Things/Mote/ABNGraserBeam</texPath>
+			<texPath>Things/Mote/EM_GraserBeam</texPath>
 			<!-- 随时间变化 -->
 			<graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
 			<shaderType>MoteBeam</shaderType>
 			<shaderParameters>
-				<_ExtraTexA>/Things/Mote/ABNBeamSecondaryNoise_A</_ExtraTexA>
-				<_ExtraTexB>/Things/Mote/ABNBeamSecondaryNoise_B</_ExtraTexB>
+				<_ExtraTexA>/Things/Mote/EM_BeamSecondaryNoise_A</_ExtraTexA>
+				<_ExtraTexB>/Things/Mote/EM_BeamSecondaryNoise_B</_ExtraTexB>
 				<!-- A的滚动速度 -->
 				<_ScrollSpeedA>-2 </_ScrollSpeedA>
 				<!-- B的滚动速度 -->
@@ -46,7 +46,7 @@
 
 
 	<ThingDef ParentName="MoteBase">
-		<defName>RC_Mote_BeamRepeaterLaser</defName>
+		<defName>EM_Mote_BeamRepeaterLaser</defName>
 		<thingClass>MoteDualAttached</thingClass>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<mote>
@@ -58,12 +58,12 @@
 		</mote>
 		<drawOffscreen>true</drawOffscreen>
 		<graphicData>
-			<texPath>Things/Mote/ABNGraserBeam</texPath>
+			<texPath>Things/Mote/EM_GraserBeam</texPath>
 			<graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
 			<shaderType>MoteBeam</shaderType>
 			<shaderParameters>
-				<_ExtraTexA>/Things/Mote/ABNBeamSecondaryNoise_A</_ExtraTexA>
-				<_ExtraTexB>/Things/Mote/ABNBeamSecondaryNoise_B</_ExtraTexB>
+				<_ExtraTexA>/Things/Mote/EM_BeamSecondaryNoise_A</_ExtraTexA>
+				<_ExtraTexB>/Things/Mote/EM_BeamSecondaryNoise_B</_ExtraTexB>
 				<_ScrollSpeedA>-2</_ScrollSpeedA>
 				<_ScrollSpeedB>2</_ScrollSpeedB>
 				<_Intensity>0.2</_Intensity>

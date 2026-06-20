@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- 单位基础特性 -->
+	<HediffDef>
+		<defName>DEV_unstoppable</defName>
+		<label>unstoppable</label>
+		<description>不可阻挡.</description>
+		<isBad>false</isBad>
+		<priceImpact>false</priceImpact>
+		<defaultLabelColor>(100, 100, 100)</defaultLabelColor>
+		<stages>
+			<li>
+				<statFactors>
+					<StaggerDurationFactor>0</StaggerDurationFactor>
+					<IncomingDamageFactor>0.8</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+  
+
+</Defs>
+
+  

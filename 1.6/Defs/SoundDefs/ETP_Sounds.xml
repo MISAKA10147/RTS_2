@@ -3,7 +3,7 @@
 
 	<!-- ——————瞄准声—————— -->
 	<SoundDef>
-		<defName>AT_Aiming</defName>
+		<defName>EM_AT_Aiming</defName>
 		<!-- 设置为持续播放 -->
 		<sustain>true</sustain>
 		<!-- 设置声音上下文为地图上使用 -->
@@ -32,7 +32,7 @@
 	
 	<!-- ——————电磁武器发射—————— -->
 	<SoundDef>
-		<defName>ATlaunch</defName>
+		<defName>EM_ATlaunch</defName>
 		<!-- 设置为持续播放 -->
 		<sustain>false</sustain>
 		<!-- 设置声音上下文为地图上使用 -->
@@ -62,7 +62,7 @@
 
 	<!-- ——————子弹掠过—————— -->
 	<SoundDef>
-		<defName>ATProjectile</defName>
+		<defName>EM_ATProjectile</defName>
 		<!-- 设置为持续播放 -->
 		<sustain>true</sustain>
 		<!-- 设置声音上下文为地图上使用 -->
@@ -91,7 +91,7 @@
 
 	<!-- ——————激光—————— -->
 	<SoundDef>
-		<defName>ETPlaser</defName>
+		<defName>EM_ETPlaser</defName>
 		<!-- 设置为持续播放 -->
 		<sustain>true</sustain>
 		<!-- 设置声音上下文为地图上使用 -->

@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="MediumUnit">
-		<defName>MUGV_AP</defName>
+	<ThingDef ParentName="EM_MediumUnit">
+		<defName>EM_MUGV_AP</defName>
 		<label>MUGV_AP</label>
 		<description>Medium attack unit1.</description>
 		<statBases>
-			<MoveSpeed>3</MoveSpeed>
+			<MoveSpeed>6</MoveSpeed>
 			<!-- 移动速度 -->
+			<ShootingAccuracyPawn>18</ShootingAccuracyPawn>
+			<Mass>100</Mass>
 		</statBases>
 		<comps>
 			<li Class="RTS.UnitCompProperties">
-				<mass>200</mass>
-				<cost>20</cost>
+				<mass>500</mass>
+				<cost>40</cost>
 			</li>
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
-				<turretDef>MUGV_AP_Turret</turretDef>
+				<turretDef>EM_MUGV_AP_Turret</turretDef>
 				<littleCooldown>5</littleCooldown>
 				<!-- 连射冷却 -->
 				<extraShootCount>0</extraShootCount>
@@ -29,7 +31,7 @@
 					<li>
 						<nodeClass>RTS.PawnRenderNode_TurretGun</nodeClass>
 						<workerClass>RTS.PawnRenderNodeWorker_TurretGun</workerClass>
-						<overrideMeshSize>(5.9, 5.9)</overrideMeshSize>
+						<overrideMeshSize>(5.5, 5.5)</overrideMeshSize>
 						<parentTagDef>Body</parentTagDef>
 						<baseLayer>20</baseLayer>
 						<pawnType>Any</pawnType>
@@ -48,11 +50,11 @@
 	</ThingDef>
 
 
-	<PawnKindDef ParentName="MediumUnitKind">
-		<defName>MUGV_AP</defName>
+	<PawnKindDef ParentName="EM_MediumUnitKind">
+		<defName>EM_MUGV_AP</defName>
 		<label>MUGV_AP</label>
 		<labelPlural>MUGV_AP</labelPlural>
-		<race>MUGV_AP</race>
+		<race>EM_MUGV_AP</race>
 		<weaponTags>
 		</weaponTags>
 	</PawnKindDef>
@@ -61,7 +63,7 @@
 
 
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>MUGV_AP_Turret</defName>
+		<defName>EM_MUGV_AP_Turret</defName>
 		<label>MUGV_AP_Turret</label>
 		<description>MUGV_AP_Turret.</description>
 		<tradeability>None</tradeability>
@@ -69,7 +71,7 @@
 		<destroyOnDrop>true</destroyOnDrop>
 		<!-- 抛弃时销毁 -->
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/MUGV_AP_Turret</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/EM_MUGV_AP_Turret</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -83,12 +85,12 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<!-- 动作类 -->
-				<defaultProjectile>Bullet_MUGV_AP</defaultProjectile>
+				<defaultProjectile>EM_Bullet_MUGV_AP</defaultProjectile>
 				<!-- 弹药类型 -->
 				<forcedMissRadius>0.01</forcedMissRadius>
-				<range>100</range>
+				<range>150</range>
 				<!-- 射程 -->
-				<soundCast>ATlaunch</soundCast>
+				<soundCast>EM_ATlaunch</soundCast>
 				<!-- 发射时的声音效果 -->
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<!-- 发射尾声声音效果 -->
@@ -109,7 +111,7 @@
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
 				<!-- 准备发射声音 -->
-				<soundAiming>AT_Aiming</soundAiming>
+				<soundAiming>EM_AT_Aiming</soundAiming>
 				<!-- 最小射程 -->
 				<minRange>10</minRange>
 				<!-- 目标特效 -->

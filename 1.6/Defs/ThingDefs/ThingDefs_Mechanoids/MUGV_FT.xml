@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="MediumUnit">
-		<defName>MUGV_FT</defName>
+	<ThingDef ParentName="EM_MediumUnit">
+		<defName>EM_MUGV_FT</defName>
 		<label>MUGV_FT</label>
 		<description>Medium attack unit1.</description>
 		<statBases>
-			<MoveSpeed>2</MoveSpeed>
+			<MoveSpeed>4</MoveSpeed>
 			<!-- 移动速度 -->
+			<Mass>100</Mass>
 		</statBases>
 		<comps>
 			<li Class="RTS.UnitCompProperties">
-				<mass>200</mass>
-				<cost>20</cost>
+				<mass>150</mass>
+				<cost>10</cost>
 			</li>
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
-				<turretDef>MUGV_FT_Turret</turretDef>
+				<turretDef>EM_MUGV_FT_Turret</turretDef>
 				<littleCooldown>5</littleCooldown>
 				<!-- 连射冷却 -->
 				<extraShootCount>0</extraShootCount>
 				<!-- 额外射击次数 -->
-				<warmupTime>200</warmupTime>
+				<warmupTime>50</warmupTime>
 				<!-- 冷却时间 -->
 				<angleOffset>-90</angleOffset>
 				<autoAttack>false</autoAttack>
@@ -29,7 +30,7 @@
 					<li>
 						<nodeClass>RTS.PawnRenderNode_TurretGun</nodeClass>
 						<workerClass>RTS.PawnRenderNodeWorker_TurretGun</workerClass>
-						<overrideMeshSize>(3, 3)</overrideMeshSize>
+						<overrideMeshSize>(2.3,2.3)</overrideMeshSize>
 						<parentTagDef>Body</parentTagDef>
 						<baseLayer>20</baseLayer>
 						<pawnType>Any</pawnType>
@@ -48,11 +49,11 @@
 	</ThingDef>
 
 
-	<PawnKindDef ParentName="MediumUnitKind">
-		<defName>MUGV_FT</defName>
+	<PawnKindDef ParentName="EM_MediumUnitKind">
+		<defName>EM_MUGV_FT</defName>
 		<label>MUGV_FT</label>
 		<labelPlural>MUGV_FT</labelPlural>
-		<race>MUGV_FT</race>
+		<race>EM_MUGV_FT</race>
 		<weaponTags>
 		</weaponTags>
 	</PawnKindDef>
@@ -61,7 +62,7 @@
 
 
 	<ThingDef ParentName="BaseWeaponTurret">
-		<defName>MUGV_FT_Turret</defName>
+		<defName>EM_MUGV_FT_Turret</defName>
 		<label>MUGV_FT_Turret</label>
 		<description>MUGV_FT_Turret.</description>
 		<tradeability>None</tradeability>
@@ -69,7 +70,7 @@
 		<destroyOnDrop>true</destroyOnDrop>
 		<!-- 抛弃时销毁 -->
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/MUGV_FT_Turret</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/EM_MUGV_FT_Turret</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -88,7 +89,7 @@
 				<!-- 预热时间（秒）：武器准备就绪所需的时间 -->
 				<warmupTime>0.1</warmupTime>
 				<!-- 射程范围（格）：最大攻击距离 -->
-				<range>20</range>
+				<range>40</range>
 				<!-- 最小射程（格）：武器有效射程的最小距离 -->
 				<minRange>2</minRange>
 				<!-- 全宽度光束范围（格）：光束在该范围内保持全宽度 -->

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="DroneUnit">
-		<defName>Bomb_Drone</defName>
+	<ThingDef ParentName="EM_DroneUnit">
+		<defName>EM_Bomb_Drone</defName>
 		<label>Bomb_Drone</label>
 		<description>Bomb_Drone.</description>
 		<statBases>
@@ -29,17 +29,17 @@
 	</ThingDef>
 
 
-	<PawnKindDef ParentName="DroneUnitKind">
-		<defName>Bomb_Drone</defName>
+	<PawnKindDef ParentName="EM_DroneUnitKind">
+		<defName>EM_Bomb_Drone</defName>
 		<label>Bomb_Drone</label>
 		<labelPlural>Bomb_Drone</labelPlural>
-		<race>Bomb_Drone</race>
+		<race>EM_Bomb_Drone</race>
 		<weaponTags>
 		</weaponTags>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Unit/Drone/Explosion_Drone</texPath>
+					<texPath>Things/Pawn/Unit/Drone/EM_Explosion_Drone</texPath>
 					<drawSize>1</drawSize>
 					<shadowData>
 						<volume>(0.5, 0.8, 0.5)</volume>
@@ -48,7 +48,7 @@
 			</li>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Unit/Drone/Explosion_Drone</texPath>
+					<texPath>Things/Pawn/Unit/Drone/EM_Explosion_Drone</texPath>
 					<drawSize>1</drawSize>
 					<shadowData>
 						<volume>(0.5, 0.8, 0.5)</volume>
