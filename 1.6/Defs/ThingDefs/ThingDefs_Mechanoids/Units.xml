@@ -481,7 +481,7 @@
 					<maskPath>Things/Pawn/Unit/EM_LightWalkingUnit/Overlays/EM_LightWalkingUnit</maskPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>EM.Graphic_Multi_8Dir_v2</graphicClass>
-					<drawSize>2.7</drawSize>
+					<drawSize>2.2</drawSize>
 					<shadowData>
 						<volume>(0.5, 0.8, 0.5)</volume>
 					</shadowData>

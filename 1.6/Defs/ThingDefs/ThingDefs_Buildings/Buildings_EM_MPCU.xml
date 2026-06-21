@@ -193,6 +193,16 @@
 						</traits>
 					</li>
 					<li>
+						<kind>EM_LightWalkingUnit_EMRG</kind>
+						<spawnTime>400</spawnTime>
+						<type>RTS_LightUnits</type>
+						<unitDesc>Light attack unit1</unitDesc>
+						<iconPath>UI/units/L_UGV_RP</iconPath>
+						<traits>
+							<li>RTS_Vacuum</li>
+						</traits>
+					</li>
+					<li>
 						<kind>EM_LUGV_emp</kind>
 						<spawnTime>400</spawnTime>
 						<type>RTS_LightUnits</type>
