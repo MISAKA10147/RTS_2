@@ -161,6 +161,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Rocket.cs" />
+    <Compile Include="JumpLauncher.cs" />
     <Compile Include="8Dir.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="16Dir.cs" />

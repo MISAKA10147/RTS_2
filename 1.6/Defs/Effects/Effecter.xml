@@ -71,5 +71,18 @@
 		</graphicData>
 	</ThingDef>
 
-
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>EM_Fleck_ProjectileSmoke</defName>
+		<graphicData>
+			<texPath>Things/Mote/EM_Smoke</texPath>
+			<drawSize>0.5</drawSize>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>FogOfWar</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>0</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<growthRate>-0.008</growthRate>
+	</FleckDef>
+	
 </Defs>

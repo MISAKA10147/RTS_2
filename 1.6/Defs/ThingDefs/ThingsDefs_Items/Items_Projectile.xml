@@ -11,16 +11,16 @@
 			<shaderType>TransparentPostLight</shaderType>
 			<!-- 半透明后处理光照着色器 -->
 		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
+		<thingClass>EM.Projectile_ExplosiveSmokeTrail</thingClass>
 		<!-- 事物类为爆炸弹药 -->
 		<projectile>
 			<damageDef>Bomb</damageDef>
 			<!-- 损伤类型定义 -->
-			<damageAmountBase>100</damageAmountBase>
+			<damageAmountBase>150</damageAmountBase>
 			<!-- 伤害值 -->
 			<speed>200</speed>
 			<!-- 弹速 -->
-			<explosionRadius>1.5</explosionRadius>
+			<explosionRadius>5.5</explosionRadius>
 			<!-- 爆炸半径 -->
 			<flyOverhead>false</flyOverhead>
 			<!-- 允许飞过头顶 -->
@@ -33,7 +33,6 @@
 			<soundAmbient>MortarRound_Ambient</soundAmbient>
 			<!-- 环境声音效果 -->
 			<preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
-			<!-- 生成爆裂标记 -->
 		</projectile>
 	</ThingDef>
 
@@ -48,11 +47,11 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
+		<thingClass>EM.Projectile_ExplosiveSmokeTrail</thingClass>
 		<projectile>
 			<damageDef>Bomb</damageDef>
 			<speed>400</speed>
-			<damageAmountBase>80</damageAmountBase>
+			<damageAmountBase>180</damageAmountBase>
 			<!-- 基础护甲穿透力 -->
 			<armorPenetrationBase>4</armorPenetrationBase>
 			<!-- 爆炸半径 -->
@@ -69,7 +68,7 @@
 			<soundAmbient>EM_ATProjectile</soundAmbient>
 			<!-- 爆炸痕迹 -->
 			<preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
-			<beamMoteDef>EM_Mote_BeamRepeaterLaser</beamMoteDef>
+			<stoppingPower>5</stoppingPower>
 		</projectile>
 	</ThingDef>
 
@@ -84,13 +83,15 @@
 		<graphicData>
 			<texPath>Things/Projectile/ShellHighExplosive</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
+			<shaderType>MoteGlow</shaderType>
 		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
+		<thingClass>EM.Projectile_ExplosiveSmokeTrail</thingClass>
 		<projectile>
 			<damageDef>Bomb</damageDef>
-			<speed>500</speed>
-			<damageAmountBase>20</damageAmountBase>
+			<!-- 爆炸时播放的特效（自定义粒子/动画） -->
+			<!--<explosionEffect>CMC_Rocket</explosionEffect>-->
+			<speed>300</speed>
+			<damageAmountBase>45</damageAmountBase>
 			<!-- 基础护甲穿透力 -->
 			<armorPenetrationBase>8</armorPenetrationBase>
 			<!-- 爆炸半径 -->
@@ -105,9 +106,7 @@
 			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
 			<!-- 环境音效 -->
 			<soundAmbient>EM_ATProjectile</soundAmbient>
-			<!-- 爆炸痕迹 -->
-			<preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
-			<beamMoteDef>EM_Mote_BeamRepeaterLaser</beamMoteDef>
+			<stoppingPower>3</stoppingPower>
 		</projectile>
 	</ThingDef>
 
@@ -130,6 +129,8 @@
 			<!-- damage amount is the damage def default -->
 			<speed>41</speed>
 			<explosionRadius>1.2</explosionRadius>
+			<!-- 弹道弧度系数， -->
+			<arcHeightFactor>2.8</arcHeightFactor>
 			<flyOverhead>true</flyOverhead>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 			<soundExplode>Explosion_EMP</soundExplode>

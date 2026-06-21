@@ -43,6 +43,18 @@
 					</li>
 				</renderNodeProperties>
 			</li>
+			<li Class="EM.CompProperties_JumpLauncher">
+				<maxCharges>3</maxCharges>
+				<cooldownTicks>1800</cooldownTicks>
+				<!-- 30秒/格 -->
+				<jumpRange>25</jumpRange>
+				<minRange>0</minRange>
+				<warmupTicks>60</warmupTicks>
+				<!-- 1秒暖机 -->
+				<targeterRadius>25</targeterRadius>
+				<jumpSound>Longjump_Launch</jumpSound>
+				<jumpEffectMote>Mote_JumpFlash</jumpEffectMote>
+			</li>
 		</comps>
 		<killedLeavingsPlayerHostile>
 			<Steel>50</Steel>
