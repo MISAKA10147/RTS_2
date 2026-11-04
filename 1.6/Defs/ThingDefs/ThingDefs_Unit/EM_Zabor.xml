@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+		<ThingDef ParentName="EM_MediumUnit">
+			<defName>EM_Mech_Zabor</defName>
+			<label>Imitation zabor</label>
+			<description>EM_Mech_Zabor.</description>
+			<statBases>
+				<MoveSpeed>2.7</MoveSpeed>
+				<!--移動速度-->
+				<AimingDelayFactor>0.9</AimingDelayFactor>
+				<StaggerDurationFactor>1.25</StaggerDurationFactor>
+				<ArmorRating_Sharp>1.3</ArmorRating_Sharp>
+				<!--銳抗-->
+				<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+				<!--鈍抗-->
+				<ArmorRating_Heat>1.3</ArmorRating_Heat>
+				<!--能抗-->
+			</statBases>
+			<race>
+				<mechFixedSkillLevel>10</mechFixedSkillLevel>
+				<body>EM_Unit_Simple</body>
+				<baseBodySize>2.1</baseBodySize>
+				<baseHealthScale>2.2</baseHealthScale>
+				<mechWeightClass>Heavy</mechWeightClass>
+			</race>
+			<comps>
+				<!-- 挂载变形 Comp -->
+				<li Class="EM.CompProperties_MorphPawnToBuilding">
+					<!-- 目标建筑 Def（必填） -->
+					<buildingDef>EM_SolarGenerator</buildingDef>
+					<!-- 技能释放/暖机时间 (tick, 60=1秒) -->
+					<warmupTicks>120</warmupTicks>
+					<!-- 自定义 Gizmo 图标 (路径相对于 Textures/ 文件夹) -->
+					<morphIconPath>UI/BuildingUnits</morphIconPath>
+					<!-- Gizmo 按钮文本 -->
+					<morphLabel>变形为哨站</morphLabel>
+					<!-- Gizmo 悬浮描述 -->
+					<morphDesc>变形成固定哨站形态，再次点击建筑可变回。</morphDesc>
+					<!-- 暖机期间倒地是否取消 (可选, 默认 true) -->
+					<cancelIfDowned>true</cancelIfDowned>
+				</li>
+				<li Class="RTS.UnitCompProperties">
+					<mass>500</mass>
+					<cost>40</cost>
+				</li>
+			</comps>
+			<butcherProducts>
+				<DMS_ChunkSlag>1</DMS_ChunkSlag>
+				<Steel>30</Steel>
+			</butcherProducts>
+		</ThingDef>
+
+		<PawnKindDef ParentName="EM_BaseUnitKind">
+			<defName>EM_Mech_Zabor</defName>
+			<label>Imitation "Zabor"</label>
+			<race>EM_Mech_Zabor</race>
+			<isFighter>true</isFighter>
+			<combatPower>300</combatPower>
+			<maxPerGroup>3</maxPerGroup>
+			<weaponMoney>2000~4000</weaponMoney>
+			<lifeStages>
+				<li>
+					<bodyGraphicData>
+						<texPath>Things/Pawn/Unit/Crossover/AncientCorps/Zabor/EM_Zabor</texPath>
+						<shaderType>CutoutComplex</shaderType>
+						<graphicClass>EM.Graphic_Multi_8Dir_v2</graphicClass>
+						<drawSize>3.3</drawSize>
+						<shadowData>
+							<volume>(1.1,1,1.1)</volume>
+							<offset>(0,0,-0.25)</offset>
+						</shadowData>
+					</bodyGraphicData>
+				</li>
+				<li>
+					<bodyGraphicData>
+						<texPath>Things/Pawn/Unit/Crossover/AncientCorps/Zabor/EM_Zabor</texPath>
+						<shaderType>CutoutComplex</shaderType>
+						<graphicClass>EM.Graphic_Multi_8Dir_v2</graphicClass>
+						<drawSize>3.3</drawSize>
+						<shadowData>
+							<volume>(1.1,1,1.1)</volume>
+							<offset>(0,0,-0.25)</offset>
+						</shadowData>
+					</bodyGraphicData>
+				</li>
+			</lifeStages>
+			<weaponTags>
+				<li>SentryDroneGunShortRange</li>
+			</weaponTags>
+			<startingHediffs>
+				<li>
+					<def>DEV_unstoppable</def>
+				</li>
+			</startingHediffs>
+		</PawnKindDef>
+</Defs>

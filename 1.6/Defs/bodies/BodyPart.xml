@@ -87,6 +87,39 @@
 
 
 
+
+	<!-- 精简型身体 -->
+	<BodyPartDef>
+		<defName>U_Integrated_Action_system</defName>
+		<label>集成行动系统</label>
+		<hitPoints>50</hitPoints>
+		<frostbiteVulnerability>2</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>ManipulationLimbDigit</li>
+			<li>ManipulationLimbSegment</li>
+			<li>ManipulationLimbCore</li>
+			<li>BloodPumpingSource</li>
+			<li>BloodFiltrationSource</li>
+			<li>SightSource</li>
+			<li>HearingSource</li>
+			<li>SightSource</li>
+			<li>HearingSource</li>
+			<li>SightSource</li>
+			<li>HearingSource</li>
+			<li>ConsciousnessSource</li>
+		</tags>
+	</BodyPartDef>
+	
+
+
+
+
+
 	<!-- 轮胎/履带 -->
 	<BodyPartDef>
 		<defName>U_Mobile_mechanism</defName>

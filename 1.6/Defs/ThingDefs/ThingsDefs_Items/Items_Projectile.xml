@@ -50,14 +50,14 @@
 		<thingClass>EM.Projectile_ExplosiveSmokeTrail</thingClass>
 		<projectile>
 			<damageDef>Bomb</damageDef>
-			<speed>400</speed>
+			<speed>600</speed>
 			<damageAmountBase>180</damageAmountBase>
 			<!-- 基础护甲穿透力 -->
 			<armorPenetrationBase>4</armorPenetrationBase>
 			<!-- 爆炸半径 -->
 			<explosionRadius>1.4</explosionRadius>
 			<!-- 是否飞越头顶 -->
-			<flyOverhead>true</flyOverhead>
+			<flyOverhead>false</flyOverhead>
 			<!-- 击中厚屋顶的声音效果 -->
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 			<!-- 爆炸声音效果 -->
@@ -90,14 +90,14 @@
 			<damageDef>Bomb</damageDef>
 			<!-- 爆炸时播放的特效（自定义粒子/动画） -->
 			<!--<explosionEffect>CMC_Rocket</explosionEffect>-->
-			<speed>300</speed>
+			<speed>500</speed>
 			<damageAmountBase>45</damageAmountBase>
 			<!-- 基础护甲穿透力 -->
 			<armorPenetrationBase>8</armorPenetrationBase>
 			<!-- 爆炸半径 -->
-			<explosionRadius>0.9</explosionRadius>
+			<explosionRadius>1.2</explosionRadius>
 			<!-- 是否飞越头顶 -->
-			<flyOverhead>true</flyOverhead>
+			<flyOverhead>false</flyOverhead>
 			<!-- 击中厚屋顶的声音效果 -->
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 			<!-- 爆炸声音效果 -->

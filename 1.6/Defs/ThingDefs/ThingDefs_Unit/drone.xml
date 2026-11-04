@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="EM_DroneUnit">
+		<defName>EM_Bomb_Drone</defName>
+		<label>Bomb_Drone</label>
+		<description>Bomb_Drone.</description>
+		<statBases>
+			<MoveSpeed>13</MoveSpeed>
+			<!-- 移动速度 -->
+		</statBases>
+		<comps>
+			<li Class="RTS.UnitCompProperties">
+				<mass>10</mass>
+				<cost>1</cost>
+			</li>
+			<li Class="CompProperties_HunterDrone">
+				<!-- 自爆时的爆炸半径 -->
+				<explosionRadius>4.6</explosionRadius>
+				<!-- 爆炸的伤害类型 -->
+				<explosionDamageType>Bomb</explosionDamageType>
+				<!-- 爆炸的基础伤害量 -->
+				<explosionDamageAmount>100</explosionDamageAmount>
+			</li>
+		</comps>
+		<killedLeavingsPlayerHostile>
+			<Steel>10</Steel>
+		</killedLeavingsPlayerHostile>
+	</ThingDef>
+
+
+	<PawnKindDef ParentName="EM_DroneUnitKind">
+		<defName>EM_Bomb_Drone</defName>
+		<label>Bomb_Drone</label>
+		<labelPlural>Bomb_Drone</labelPlural>
+		<race>EM_Bomb_Drone</race>
+		<weaponTags>
+		</weaponTags>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Unit/Drone/EM_Explosion_Drone</texPath>
+					<drawSize>1</drawSize>
+					<shadowData>
+						<volume>(0.5, 0.8, 0.5)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Unit/Drone/EM_Explosion_Drone</texPath>
+					<drawSize>1</drawSize>
+					<shadowData>
+						<volume>(0.5, 0.8, 0.5)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+
+
+
+
+</Defs>

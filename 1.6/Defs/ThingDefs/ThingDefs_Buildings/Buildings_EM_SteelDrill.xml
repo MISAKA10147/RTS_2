@@ -26,16 +26,12 @@
 			<!-- 被摧毁时的声音 -->
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
-		<!-- 建筑组件 -->
 		<comps>
-			<!-- 电源组件 -->
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<!-- 基础电力消耗 -->
 				<basePowerConsumption>500</basePowerConsumption>
 			</li>
-			<!-- 可损坏组件 -->
-			<li Class="CompProperties_Breakdownable"/>
 			<!-- 可开关组件 -->
 			<li Class="CompProperties_Flickable"/>
 			<!-- 生成器组件 -->
@@ -44,26 +40,23 @@
 				<!-- 生成物 -->
 				<thingToSpawn>Steel</thingToSpawn>
 				<!-- 生成数量 -->
-				<spawnCount>20</spawnCount>
+				<spawnCount>200</spawnCount>
 				<!-- 生成间隔范围 -->
 				<spawnIntervalRange>
-					<min>6000</min>
-					<max>6000</max>
+					<min>60000</min>
+					<max>60000</max>
 				</spawnIntervalRange>
 				<!-- 是否显示生成剩余时间 -->
 				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
 				<!-- 如果拥有则显示消息 -->
 				<showMessageIfOwned>true</showMessageIfOwned>
 			</li>
-			<!-- 爆炸组件 -->
 			<li Class="CompProperties_Explosive">
 				<!-- 爆炸半径 -->
 				<explosiveRadius>8</explosiveRadius>
-				<!-- 爆炸伤害类型 -->
 				<explosiveDamageType>Flame</explosiveDamageType>
 			</li>
 			<li Class="CompProperties_HeatPusher">
-				<!-- 组件类名，特定于有动力的热量推送 -->
 				<compClass>CompHeatPusherPowered</compClass>
 				<!-- 每秒散发的热量单位 -->
 				<heatPerSecond>12</heatPerSecond>
@@ -74,7 +67,7 @@
 		<statBases>
 			<MarketValue>10000</MarketValue>
 			<MaxHitPoints>1000</MaxHitPoints>
-			<Flammability>1.0</Flammability>
+			<Flammability>0</Flammability>
 			<Beauty>-10</Beauty>
 			<Mass>35</Mass>
 			<WorkToBuild>8000</WorkToBuild>

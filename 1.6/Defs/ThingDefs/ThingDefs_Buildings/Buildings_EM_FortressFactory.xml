@@ -41,7 +41,7 @@
 			<!-- 构建所需工作量 -->
 			<WorkToBuild>2500</WorkToBuild>
 			<!-- 易燃性 -->
-			<Flammability>0.1</Flammability>
+			<Flammability>0</Flammability>
 		</statBases>
 		<!-- 计时器类型 -->
 		<tickerType>Normal</tickerType>

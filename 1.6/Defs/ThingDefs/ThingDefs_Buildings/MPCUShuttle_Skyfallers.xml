@@ -9,7 +9,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <texPath>Things/Building/MPCU/EM_MPCU_ship/EM_MPCU_ship</texPath>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(15,15)</drawSize>
+      <drawSize>(17,17)</drawSize>
     </graphicData>
     <skyfaller>
 		<anticipationSound>Shuttle_Landing</anticipationSound>
@@ -61,7 +61,7 @@
 		<graphicClass>Graphic_Multi</graphicClass>
 		<texPath>Things/Building/MPCU/EM_MPCU_ship/EM_MPCU_ship</texPath>
 		<shaderType>CutoutComplex</shaderType>
-		<drawSize>(15,15)</drawSize>
+		<drawSize>(17,17)</drawSize>
 	</graphicData>
 	<skyfaller>
 		<reversed>true</reversed>
@@ -116,7 +116,7 @@
 	<label>MPCU</label>
 	<description>Mobile industrial units.</description>
 	<expandingIconTexture>Things/Building/MPCU/EM_MPCU_sign</expandingIconTexture>
-	<expandingIconDrawSize>3</expandingIconDrawSize>
+	<expandingIconDrawSize>1</expandingIconDrawSize>
 </WorldObjectDef>
   
 </Defs>

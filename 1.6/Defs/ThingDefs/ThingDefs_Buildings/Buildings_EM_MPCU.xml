@@ -15,7 +15,7 @@
 		<!-- 可通过性 -->
 		<fillPercent>0.9</fillPercent>
 		<!-- 占据百分比 -->
-		<size>(6,10)</size>
+		<size>(7,14)</size>
 		<drawHighlight>true</drawHighlight>
 		<!-- 是否绘制高亮 -->
 		<highlightColor>(0.56, 0.62, 0.9)</highlightColor>
@@ -30,13 +30,13 @@
 			<!-- 贴图路径 -->
 			<shaderType>CutoutComplex</shaderType>
 			<!-- 着色器类型 -->
-			<drawSize>(15,15)</drawSize>
-			<drawOffset>(0, 0, -1)</drawOffset>
+			<drawSize>(17,17)</drawSize>
+			<drawOffset>(0, 0, 0)</drawOffset>
 			<!-- 绘制尺寸 -->
 			<shadowData>
-				<volume>(5,0.2,8)</volume>
+				<volume>(6,0.5,13)</volume>
 				<!-- 影子体积 -->
-				<offset>(0,0,0)</offset>
+				<offset>(0,0,-1)</offset>
 				<!-- 影子偏移 -->
 			</shadowData>
 		</graphicData>
@@ -125,17 +125,6 @@
 
 		<!-- 组件 -->
 		<comps>
-			<!-- 发光组件属性 -->
-			<li Class="CompProperties_Glower">
-				<!-- 发光半径 -->
-				<glowRadius>6</glowRadius>
-				<!-- 发光颜色 -->
-				<glowColor>(255,200,80,0)</glowColor>
-				<!-- 是否启用颜色选择器 -->
-				<colorPickerEnabled>false</colorPickerEnabled>
-				<!-- 是否启用暗光切换 -->
-				<darklightToggle>false</darklightToggle>
-			</li>
 			<li Class="CompProperties_Battery">
 				<!-- 电池组件属性 -->
 				<storedEnergyMax>300000</storedEnergyMax>
@@ -148,9 +137,9 @@
 				<!-- 传输电力 -->
 			</li>
 			<li Class="RTS.CompPropertiesHiveSystem">
-				<costLimit>500</costLimit>
+				<costLimit>600</costLimit>
 				<!-- 人口 -->
-				<massLimit>2000</massLimit>
+				<massLimit>4000</massLimit>
 				<!-- 质量库存 -->
 				<massPerCount>1</massPerCount>
 				<!-- 钢铁对应的Mass -->
@@ -289,7 +278,7 @@
 				<!-- 初始目标燃料水平 -->
 				<fuelFilter>
 					<thingDefs>
-						<li>EM_GeneralSubstrate</li>
+						<li>Steel</li>
 						<!-- 燃料过滤器中的事物定义 -->
 					</thingDefs>
 				</fuelFilter>

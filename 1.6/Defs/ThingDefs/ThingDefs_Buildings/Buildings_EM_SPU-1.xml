@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--————————————————————藻井————————————————————————-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>SPU-one</defName>
+		<label>SPU-1</label>
+		<description>Survival Production Unit Type 1.</description>
+		<graphicData>
+			<texPath>Things/Building/SPU_1/EM_SPU_1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(7, 7)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+			<shadowData>
+				<volume>(3, 0.5, 3)</volume>
+				<offset>(0.0, 0.0, -0.4)</offset>
+			</shadowData>
+		</graphicData>
+		<costList>
+			<Steel>200</Steel>
+		</costList>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<comps>
+			<!-- 电源组件 -->
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<!-- 基础电力消耗 -->
+				<basePowerConsumption>10000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<!-- 生成器组件 -->
+			<li Class="CompProperties_Spawner">
+				<requiresPower>true</requiresPower>
+				<!-- 生成物 -->
+				<thingToSpawn>Chemfuel</thingToSpawn>
+				<!-- 生成数量 -->
+				<spawnCount>200</spawnCount>
+				<!-- 生成间隔范围 -->
+				<spawnIntervalRange>
+					<min>6000</min>
+					<max>6000</max>
+				</spawnIntervalRange>
+				<!-- 是否显示生成剩余时间 -->
+				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+				<!-- 如果拥有则显示消息 -->
+				<showMessageIfOwned>true</showMessageIfOwned>
+			</li>
+			<!-- 爆炸组件 -->
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>8</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+			</li>
+			<!-- 发光组件属性 -->
+			<li Class="CompProperties_Glower">
+				<glowRadius>10</glowRadius>
+				<!-- 发光颜色 -->
+				<glowColor>(255,130,20,0)</glowColor>
+				<!-- 是否启用颜色选择器 -->
+				<colorPickerEnabled>false</colorPickerEnabled>
+				<!-- 是否启用暗光切换 -->
+				<darklightToggle>false</darklightToggle>
+			</li>
+		</comps>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MarketValue>10000</MarketValue>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Beauty>-10</Beauty>
+			<Mass>35</Mass>
+			<WorkToBuild>8000</WorkToBuild>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardCore</li>
+		</thingSetMakerTags>
+		<tickerType>Normal</tickerType>
+		<size>(6, 6)</size>
+		<fillPercent>1.0</fillPercent>
+		<passability>Standable</passability>
+		<!-- 是否可旋转 -->
+		<rotatable>false</rotatable>
+		<!-- 是否可以与区域重叠 -->
+		<canOverlapZones>false</canOverlapZones>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>EM_Self-assemblyBuilding</designationCategory>
+		<uiOrder>2100</uiOrder>
+		<constructEffect>ConstructMetal</constructEffect>
+		<!-- 建造效果，定义建造时的视觉效果 -->
+	</ThingDef>
+
+
+</Defs>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--————————————————————————————科技地板——————————————————————-->
+	<TerrainDef ParentName="FloorBase">
+		<defName>EM_Substrate_floor</defName>
+		<label>Substrate floor</label>
+		<renderPrecedence>250</renderPrecedence>
+		<description>Substrate floor.</description>
+		<texturePath>Terrain/EM_Substrate_floor</texturePath>
+		<color>(200,200,200)</color>
+		<isPaintable>true</isPaintable>
+		<statBases>
+			<WorkToBuild>50</WorkToBuild>
+			<CleaningTimeFactor>0.2</CleaningTimeFactor>
+			<Cleanliness>0.6</Cleanliness>
+			<Beauty>2</Beauty>
+		</statBases>
+		<costList>
+			<Steel>1</Steel>
+		</costList>
+		<!-- 设计分类 -->
+		<designationCategory>EM_Self-assemblyBuilding</designationCategory>
+	</TerrainDef>
+
+
+
+
+	<TerrainDef ParentName="FloorBase">
+		<defName>EM_Substrate_floor_alert</defName>
+		<label>Substrate floor alert</label>
+		<renderPrecedence>250</renderPrecedence>
+		<description>Substrate floor alert.</description>
+		<texturePath>Terrain/EM_Substrate_floor_alert</texturePath>
+		<color>(200,200,200)</color>
+		<isPaintable>true</isPaintable>
+		<statBases>
+			<WorkToBuild>50</WorkToBuild>
+			<CleaningTimeFactor>0.2</CleaningTimeFactor>
+			<Cleanliness>0.6</Cleanliness>
+			<Beauty>2</Beauty>
+		</statBases>
+		<costList>
+			<Steel>1</Steel>
+		</costList>
+		<!-- 设计分类 -->
+		<designationCategory>EM_Self-assemblyBuilding</designationCategory>
+	</TerrainDef>
+	
+	
+	
+	
+	
+</Defs>
