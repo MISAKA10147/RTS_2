@@ -45,10 +45,9 @@
 					<cost>40</cost>
 				</li>
 			</comps>
-			<butcherProducts>
-				<DMS_ChunkSlag>1</DMS_ChunkSlag>
-				<Steel>30</Steel>
-			</butcherProducts>
+			<killedLeavings>
+				<Units_Fragments>3</Units_Fragments>
+			</killedLeavings>
 		</ThingDef>
 
 		<PawnKindDef ParentName="EM_BaseUnitKind">

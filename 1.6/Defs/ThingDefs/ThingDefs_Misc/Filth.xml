@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!--————————————————————————泄露基质——————————————————-->
+	<ThingDef ParentName="BaseFilth">
+		<defName>EM_Filth_GeneralSubstrate</defName>
+		<label>Filth_GeneralSubstrat</label>
+		<statBases>
+			<Beauty>-5</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/Spatter</texPath>
+			<color>(240, 240, 240, 170)</color>
+		</graphicData>
+		<filth>
+			<disappearsInDays>1~2</disappearsInDays>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>10</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+		</filth>
+	</ThingDef>
+
+
+
+
+</Defs>

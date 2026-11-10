@@ -103,6 +103,9 @@
 				<li>Mining</li>
 			</mechEnabledWorkTypes>
 		</race>
+		<killedLeavings>
+			<Units_Fragments>1</Units_Fragments>
+		</killedLeavings>
 	</ThingDef>
 
 	<PawnKindDef ParentName="EM_EngineerUnitKind">

@@ -56,9 +56,9 @@
 				<jumpEffectMote>Mote_JumpFlash</jumpEffectMote>
 			</li>
 		</comps>
-		<killedLeavingsPlayerHostile>
-			<Steel>50</Steel>
-		</killedLeavingsPlayerHostile>
+		<killedLeavings>
+			<Units_Fragments>1</Units_Fragments>
+		</killedLeavings>
 	</ThingDef>
 
 
