@@ -33,11 +33,11 @@
 		<!-- 建筑尺寸 -->
 		<size>(2,2)</size>
 		<statBases>
-			<MaxHitPoints>1000</MaxHitPoints>
-			<Flammability>0.3</Flammability>
+			<MaxHitPoints>1500</MaxHitPoints>
+			<Flammability>0</Flammability>
 			<WorkToBuild>10000</WorkToBuild>
-			<Mass>100</Mass>
-			<Beauty>-1</Beauty>
+			<Mass>1000</Mass>
+			<Beauty>3</Beauty>
 		</statBases>
 		<!-- 计时器类型 -->
 		<tickerType>Normal</tickerType>

@@ -10,9 +10,9 @@
 		<graphicData>
 			<texPath>Things/Building/SolarCollector/EM_SolarCollector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(3,3)</drawSize>
+			<drawSize>(11,11)</drawSize>
 			<shadowData>
-				<volume>(1.5,0.75,1.5)</volume>
+				<volume>(7,0.75,7)</volume>
 				<offset>(0,0,0)</offset>
 			</shadowData>
 			<damageData>
@@ -35,7 +35,7 @@
 			<Flammability>0</Flammability>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<size>(2,2)</size>
+		<size>(8,8)</size>
 		<building>
 			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
 		</building>
@@ -69,7 +69,7 @@
 			<li Class="CompProperties_Power">
 				<compClass>EM.CompPowerPlantSolar</compClass>
 				<!-- 基础电力消耗（负数表示产生电力） -->
-				<basePowerConsumption>-2500</basePowerConsumption>
+				<basePowerConsumption>-12000</basePowerConsumption>
 				<!-- 是否传输电力 -->
 				<transmitsPower>true</transmitsPower>
 			</li>

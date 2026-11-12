@@ -20,7 +20,7 @@
 			<li Class="RTS.CompProperties_TurretGun">
 				<!-- 添加炮塔枪组件 -->
 				<turretDef>EM_LUGV_MG_Turret</turretDef>
-				<littleCooldown>5</littleCooldown>
+				<littleCooldown>0</littleCooldown>
 				<!-- 连射冷却 -->
 				<extraShootCount>5</extraShootCount>
 				<!-- 额外射击次数 -->
@@ -117,7 +117,7 @@
 				<!-- 关联的身体部位组 BulbTurret -->
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 				<!-- 确保关联的身体部位组始终可用 -->
-				<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
 				<!-- 连射间隔 -->
 				<!-- 每次连发数量 -->
 				<burstShotCount>1</burstShotCount>
